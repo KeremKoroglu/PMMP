@@ -24,7 +24,7 @@ namespace PersonalMoneyManagementAndPlanning
             string identityFilePath = "identity.txt";
             string langFilePath = "lang.txt";
 
-            ClsLang.Lang = File.ReadAllText(langFilePath);
+            Lang.AppLang = File.ReadAllText(langFilePath);
 
             if (File.Exists(stateFilePath))
             {
@@ -34,7 +34,7 @@ namespace PersonalMoneyManagementAndPlanning
                 {
                     if (File.Exists(identityFilePath))
                     {
-                        ClsDatabase.Id = File.ReadAllText(identityFilePath);
+                        Database.SetId(File.ReadAllText(identityFilePath));
                     }
 
                     Application.Run(new FrmMain());

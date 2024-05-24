@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PersonalMoneyManagementAndPlanning.MainForms
 {
@@ -35,11 +36,21 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
             // Calendar ComboBox
             #region
             CmbCalendar.Items.Clear();
-            CmbCalendar.Items.Add(ClsLang.GetText("Day"));
-            CmbCalendar.Items.Add(ClsLang.GetText("Week"));
-            CmbCalendar.Items.Add(ClsLang.GetText("Month"));
-            CmbCalendar.Items.Add(ClsLang.GetText("Year"));
+            CmbCalendar.Items.Add(Lang.GetText("Day"));
+            CmbCalendar.Items.Add(Lang.GetText("Week"));
+            CmbCalendar.Items.Add(Lang.GetText("Month"));
+            CmbCalendar.Items.Add(Lang.GetText("Year"));
             CmbCalendar.SelectedIndex = 2;
+            #endregion
+
+            // Accounts ComboBox
+            #region
+            foreach (var item in Database.Accounts())
+            {
+                CmbAccounts.Items.Add(Lang.GetText(item));
+            }
+            CmbAccounts.Items.Add(Lang.GetText("All"));
+            CmbAccounts.SelectedIndex = 0;
             #endregion
         }
         #endregion
@@ -64,7 +75,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
                         if (year == 0)
                         {
                             year = 1;                            
-                            MessageBox.Show(ClsLang.GetText("ErrorYear0"), ClsLang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(Lang.GetText("ErrorYear0"), Lang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     day = DateTime.DaysInMonth(year, month);
@@ -88,7 +99,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
                         if (year == 0)
                         {
                             year = 1;
-                            MessageBox.Show(ClsLang.GetText("ErrorYear0"), ClsLang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(Lang.GetText("ErrorYear0"), Lang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     day = DateTime.DaysInMonth(year, month) + day;
@@ -109,7 +120,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
                     if (year == 0)
                     {
                         year = 1;                    
-                        MessageBox.Show(ClsLang.GetText("ErrorYear0"), ClsLang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(Lang.GetText("ErrorYear0"), Lang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -123,7 +134,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
                 if (year == 0)
                 {
                     year = 1;
-                    MessageBox.Show(ClsLang.GetText("ErrorYear0"), ClsLang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Lang.GetText("ErrorYear0"), Lang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             #endregion
@@ -149,7 +160,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
                         if (year == 10000)
                         {
                             year = 9999;
-                            MessageBox.Show(ClsLang.GetText("ErrorYear10000"), ClsLang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(Lang.GetText("ErrorYear10000"), Lang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     day = 1;
@@ -173,7 +184,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
                         if (year == 10000)
                         {
                             year = 9999;
-                            MessageBox.Show(ClsLang.GetText("ErrorYear10000"), ClsLang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(Lang.GetText("ErrorYear10000"), Lang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     
@@ -202,7 +213,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
                     if (year == 10000)
                     {
                         year = 9999;
-                        MessageBox.Show(ClsLang.GetText("ErrorYear10000"), ClsLang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(Lang.GetText("ErrorYear10000"), Lang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -216,7 +227,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
                 if (year == 10000)
                 {
                     year = 9999;
-                    MessageBox.Show(ClsLang.GetText("ErrorYear10000"), ClsLang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Lang.GetText("ErrorYear10000"), Lang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             #endregion
@@ -231,6 +242,11 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
         {
             GetValues();
         }
+
+        private void CmbAccounts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetValues();
+        }
         #endregion
 
         // FUNCTION
@@ -239,9 +255,9 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
         {
             decimal total = incomes - expenses;
 
-            LblIncome.Text = ClsLang.GetText("Income") + " : " + incomes + "₺";
-            LblExpense.Text = ClsLang.GetText("Expense") + " : " + expenses + "₺";
-            LblTotal.Text = ClsLang.GetText("Total") + " : " + total + "₺";
+            LblIncome.Text = Lang.GetText("Income") + " : " + incomes + "₺";
+            LblExpense.Text = Lang.GetText("Expense") + " : " + expenses + "₺";
+            LblTotal.Text = Lang.GetText("Total") + " : " + total + "₺";
 
             CpbTotal.Maximum = Convert.ToInt32(incomes + expenses);
             CpbTotal.Value = Math.Max(0, Convert.ToInt32(total));
@@ -267,43 +283,43 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
                 }
             }
 
-            LblTotalIncomePercent.Text = $"{ClsLang.GetText("Earning")} % {Math.Round(earningPer, 2)}";
-            LblTotalExpensePercent.Text = $"{ClsLang.GetText("Expense")} % {Math.Round(totalExpensePer, 2)}";
+            LblTotalIncomePercent.Text = $"{Lang.GetText("Earning")} % {Math.Round(earningPer, 2)}";
+            LblTotalExpensePercent.Text = $"{Lang.GetText("Expense")} % {Math.Round(totalExpensePer, 2)}";
 
             CpbDistribution.Maximum = Convert.ToInt32(totalAmount);
             CpbDistribution.Value = Math.Max(0, Convert.ToInt32(incomes));
 
-            LblDistributionIncomePercent.Text = $"{ClsLang.GetText("Income")} % {Math.Round(incomePer, 2)}";
-            LblDistributionExpensePercent.Text = $"{ClsLang.GetText("Expense")} % {Math.Round(distributionExpensePer, 2)}";
+            LblDistributionIncomePercent.Text = $"{Lang.GetText("Income")} % {Math.Round(incomePer, 2)}";
+            LblDistributionExpensePercent.Text = $"{Lang.GetText("Expense")} % {Math.Round(distributionExpensePer, 2)}";
         }
 
         public void GetValues()
         {
-            this.Text = ClsLang.GetText("MainForm");
-            LblMonth.Text = ClsLang.GetMonths()[month - 1];
-            CpbTotal.Text = ClsLang.GetText("Total");
-            CpbDistribution.Text = ClsLang.GetText("Distribution");
+            this.Text = Lang.GetText("MainForm");
+            LblMonth.Text = Lang.GetMonths()[month - 1];
+            CpbTotal.Text = Lang.GetText("Total");
+            CpbDistribution.Text = Lang.GetText("Distribution");
 
             if (CmbCalendar.SelectedIndex == 0)
             {
-                LblMonth.Text = ClsLang.GetMonths()[month - 1] + " - " + day;
-                ReportCalculation(ClsDatabase.TotalDailyIncomes(day, month, year), ClsDatabase.TotalDailyExpenses(day, month, year));
+                LblMonth.Text = Lang.GetMonths()[month - 1] + " - " + day;
+                ReportCalculation(Database.TotalDailyIncomes(day, month, year, CmbAccounts.Text), Database.TotalDailyExpenses(day, month, year, CmbAccounts.Text));
             }
             else if (CmbCalendar.SelectedIndex == 1)
             {
                 DateTime date = new(year, month, day);
-                LblMonth.Text = $"{ClsLang.GetMonths()[month - 1]} ({day} - {date.AddDays(7).Day})";
-                ReportCalculation(ClsDatabase.TotalWeeklyIncomes(day, month, year), ClsDatabase.TotalWeeklyExpenses(day, month, year));
+                LblMonth.Text = $"{Lang.GetMonths()[month - 1]} ({day} - {date.AddDays(7).Day})";
+                ReportCalculation(Database.TotalWeeklyIncomes(day, month, year, CmbAccounts.Text), Database.TotalWeeklyExpenses(day, month, year, CmbAccounts.Text));
             }
             else if (CmbCalendar.SelectedIndex == 2)
             {
-                LblMonth.Text = ClsLang.GetMonths()[month - 1];
-                ReportCalculation(ClsDatabase.TotalMonthlyIncomes(month, year), ClsDatabase.TotalMonthlyExpenses(month, year));
+                LblMonth.Text = Lang.GetMonths()[month - 1];
+                ReportCalculation(Database.TotalMonthlyIncomes(month, year, CmbAccounts.Text), Database.TotalMonthlyExpenses(month, year, CmbAccounts.Text));
             }
             else if (CmbCalendar.SelectedIndex == 3)
             {
                 LblMonth.Text = "";
-                ReportCalculation(ClsDatabase.TotalYearlyIncomes(year), ClsDatabase.TotalYearlyExpenses(year));
+                ReportCalculation(Database.TotalYearlyIncomes(year, CmbAccounts.Text), Database.TotalYearlyExpenses(year, CmbAccounts.Text));
             }
             
             LblYear.Text = year.ToString();

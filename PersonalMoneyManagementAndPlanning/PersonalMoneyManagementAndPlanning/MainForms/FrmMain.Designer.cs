@@ -39,13 +39,13 @@
             this.TsmTotal = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmReport = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmLang = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmAccounts = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmMainMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.PnlBottomMenu = new System.Windows.Forms.Panel();
             this.PnlRightMenu = new System.Windows.Forms.Panel();
             this.PnlLeftMenu = new System.Windows.Forms.Panel();
             this.Tlt = new System.Windows.Forms.ToolTip(this.components);
             this.PnlFill = new System.Windows.Forms.Panel();
-            this.TsmAccounts = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsmMainMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.MnsTopMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +93,7 @@
             this.TsmSettings.Name = "TsmSettings";
             this.TsmSettings.Size = new System.Drawing.Size(56, 96);
             this.TsmSettings.Text = "Ayarlar";
+            this.TsmSettings.Click += new System.EventHandler(this.TsmSettings_Click);
             // 
             // TsmCalendar
             // 
@@ -131,6 +132,19 @@
             this.TsmLang.Text = "Dili Değiştir";
             this.TsmLang.Click += new System.EventHandler(this.TsmLang_Click);
             // 
+            // TsmAccounts
+            // 
+            this.TsmAccounts.Name = "TsmAccounts";
+            this.TsmAccounts.Size = new System.Drawing.Size(65, 96);
+            this.TsmAccounts.Text = "Hesaplar";
+            // 
+            // TsmMainMenu
+            // 
+            this.TsmMainMenu.Name = "TsmMainMenu";
+            this.TsmMainMenu.Size = new System.Drawing.Size(74, 96);
+            this.TsmMainMenu.Text = "Ana Menü";
+            this.TsmMainMenu.Click += new System.EventHandler(this.TsmMainMenu_Click);
+            // 
             // PnlBottomMenu
             // 
             this.PnlBottomMenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -165,19 +179,6 @@
             this.PnlFill.Name = "PnlFill";
             this.PnlFill.Size = new System.Drawing.Size(1504, 841);
             this.PnlFill.TabIndex = 5;
-            // 
-            // TsmAccounts
-            // 
-            this.TsmAccounts.Name = "TsmAccounts";
-            this.TsmAccounts.Size = new System.Drawing.Size(65, 96);
-            this.TsmAccounts.Text = "Hesaplar";
-            // 
-            // TsmMainMenu
-            // 
-            this.TsmMainMenu.Name = "TsmMainMenu";
-            this.TsmMainMenu.Size = new System.Drawing.Size(74, 96);
-            this.TsmMainMenu.Text = "Ana Menü";
-            this.TsmMainMenu.Click += new System.EventHandler(this.TsmMainMenu_Click);
             // 
             // FrmMain
             // 

@@ -38,6 +38,7 @@
             this.LblDistributionIncomePercent = new System.Windows.Forms.Label();
             this.LblDistributionExpensePercent = new System.Windows.Forms.Label();
             this.PnlCalculation = new System.Windows.Forms.Panel();
+            this.CmbAccounts = new System.Windows.Forms.ComboBox();
             this.CmbCalendar = new System.Windows.Forms.ComboBox();
             this.LblIncome = new System.Windows.Forms.Label();
             this.LblTotal = new System.Windows.Forms.Label();
@@ -200,6 +201,7 @@
             // PnlCalculation
             // 
             this.PnlCalculation.BackColor = System.Drawing.SystemColors.Control;
+            this.PnlCalculation.Controls.Add(this.CmbAccounts);
             this.PnlCalculation.Controls.Add(this.CmbCalendar);
             this.PnlCalculation.Controls.Add(this.LblIncome);
             this.PnlCalculation.Controls.Add(this.LblTotal);
@@ -208,6 +210,17 @@
             this.PnlCalculation.Name = "PnlCalculation";
             this.PnlCalculation.Size = new System.Drawing.Size(757, 340);
             this.PnlCalculation.TabIndex = 6;
+            // 
+            // CmbAccounts
+            // 
+            this.CmbAccounts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbAccounts.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CmbAccounts.FormattingEnabled = true;
+            this.CmbAccounts.Location = new System.Drawing.Point(633, 45);
+            this.CmbAccounts.Name = "CmbAccounts";
+            this.CmbAccounts.Size = new System.Drawing.Size(121, 35);
+            this.CmbAccounts.TabIndex = 7;
+            this.CmbAccounts.SelectedIndexChanged += new System.EventHandler(this.CmbAccounts_SelectedIndexChanged);
             // 
             // CmbCalendar
             // 
@@ -351,5 +364,6 @@
         private System.Windows.Forms.Panel PnlDistribution;
         private System.Windows.Forms.Label LblDistributionExpensePercent;
         private System.Windows.Forms.ComboBox CmbCalendar;
+        private System.Windows.Forms.ComboBox CmbAccounts;
     }
 }

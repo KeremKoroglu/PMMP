@@ -39,7 +39,7 @@ namespace PersonalMoneyManagementAndPlanning
 
             // LANG
             #region
-            ClsLang.SetLang("TR");
+            Lang.SetLang("TR");
             ChangeLang();
             #endregion
         }
@@ -54,19 +54,19 @@ namespace PersonalMoneyManagementAndPlanning
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if (ClsDatabase.Login(TxtEmail.Text, TxtPassword.Text))
+            if (Database.Login(TxtEmail.Text, TxtPassword.Text))
             {
+                WriteLoginState(true, TxtEmail.Text);
+
                 TxtEmail.Clear();
                 TxtPassword.Clear();
-
-                WriteLoginState(true, TxtEmail.Text);
 
                 Main.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show(ClsLang.GetText("ErrorLogin"), ClsLang.GetText("MessageError"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Lang.GetText("ErrorLogin"), Lang.GetText("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 TxtPassword.Clear();
                 TxtPassword.Focus();
@@ -83,7 +83,7 @@ namespace PersonalMoneyManagementAndPlanning
         #region
         private void CmbLang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ClsLang.SetLang(CmbLang.Text);
+            Lang.SetLang(CmbLang.Text);
             ChangeLang();
         }
         #endregion
@@ -92,20 +92,20 @@ namespace PersonalMoneyManagementAndPlanning
         #region
         void ChangeLang()
         {
-            this.Text = ClsLang.GetText("LoginForm"); ;
-            LblEmail.Text = ClsLang.GetText("Email");
-            LblPassword.Text = ClsLang.GetText("Password");
-            BtnLogin.Text = ClsLang.GetText("Login");
-            BtnExit.Text = ClsLang.GetText("Exit");
-            BtnRegister.Text = ClsLang.GetText("Register");
+            this.Text = Lang.GetText("LoginForm"); ;
+            LblEmail.Text = Lang.GetText("Email");
+            LblPassword.Text = Lang.GetText("Password");
+            BtnLogin.Text = Lang.GetText("Login");
+            BtnExit.Text = Lang.GetText("Exit");
+            BtnRegister.Text = Lang.GetText("Register");
         }
 
-        void WriteLoginState(bool isLoggedIn, string id = "")
+        void WriteLoginState(bool isLoggedIn, string id)
         {
             string content = isLoggedIn ? "1" : "0";
             File.WriteAllText("state.txt", content);
             File.WriteAllText("identity.txt", id);
-            File.WriteAllText("lang.txt", ClsLang.Lang);
+            File.WriteAllText("lang.txt", Lang.AppLang);
         }
         #endregion
     }

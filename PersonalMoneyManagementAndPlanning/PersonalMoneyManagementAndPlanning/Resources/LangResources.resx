@@ -123,6 +123,30 @@
   <data name="AccountTR" xml:space="preserve">
     <value>Hesap</value>
   </data>
+  <data name="AddEN" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddExpenseSuccesfulEN" xml:space="preserve">
+    <value>Expense Added</value>
+  </data>
+  <data name="AddExpenseSuccesfulTR" xml:space="preserve">
+    <value>Gider Eklendi</value>
+  </data>
+  <data name="AddIncomeSuccesfulEN" xml:space="preserve">
+    <value>Income Added</value>
+  </data>
+  <data name="AddIncomeSuccesfulTR" xml:space="preserve">
+    <value>Gelir Eklendi</value>
+  </data>
+  <data name="AddTR" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="AllEN" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AllTR" xml:space="preserve">
+    <value>Tümü</value>
+  </data>
   <data name="AmountEN" xml:space="preserve">
     <value>Amount</value>
   </data>
@@ -141,6 +165,24 @@
   <data name="AugustTR" xml:space="preserve">
     <value>Ağustos</value>
   </data>
+  <data name="BackEN" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BackTR" xml:space="preserve">
+    <value>Geri</value>
+  </data>
+  <data name="BankAccountEN" xml:space="preserve">
+    <value>Bank Account</value>
+  </data>
+  <data name="BankAccountTR" xml:space="preserve">
+    <value>Banka Hesabı</value>
+  </data>
+  <data name="BankCardEN" xml:space="preserve">
+    <value>Bank Card</value>
+  </data>
+  <data name="BankCardTR" xml:space="preserve">
+    <value>Banka Kartı</value>
+  </data>
   <data name="BillEN" xml:space="preserve">
     <value>Bill</value>
   </data>
@@ -152,6 +194,12 @@
   </data>
   <data name="CancelTR" xml:space="preserve">
     <value>İptal</value>
+  </data>
+  <data name="CashEN" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="CashTR" xml:space="preserve">
+    <value>Nakit</value>
   </data>
   <data name="CategoryEN" xml:space="preserve">
     <value>Category</value>
@@ -176,6 +224,12 @@
   </data>
   <data name="CreditCardTR" xml:space="preserve">
     <value>Kredi Kartı</value>
+  </data>
+  <data name="CreditEN" xml:space="preserve">
+    <value>Credit</value>
+  </data>
+  <data name="CreditTR" xml:space="preserve">
+    <value>Kredi</value>
   </data>
   <data name="DateEN" xml:space="preserve">
     <value>Date</value>
@@ -249,6 +303,9 @@
   <data name="ErrorEmailConflictTR" xml:space="preserve">
     <value>Girdiğiniz Eposta Sistemde Kayıtlı</value>
   </data>
+  <data name="ErrorEN" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="ErrorLoginEN" xml:space="preserve">
     <value>Email or Password is Incorrect</value>
   </data>
@@ -308,6 +365,9 @@
   </data>
   <data name="ErrorMissingSurnameTR" xml:space="preserve">
     <value>Lütfen Soyadınızı Girin</value>
+  </data>
+  <data name="ErrorTR" xml:space="preserve">
+    <value>Hata</value>
   </data>
   <data name="ErrorYear0EN" xml:space="preserve">
     <value>Date Cannot Be 0!</value>
@@ -375,11 +435,23 @@
   <data name="IncomeTR" xml:space="preserve">
     <value>Gelir</value>
   </data>
+  <data name="InformationEN" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="InformationTR" xml:space="preserve">
+    <value>Bilgi</value>
+  </data>
   <data name="InternetBillEN" xml:space="preserve">
     <value>Internet Bill</value>
   </data>
   <data name="InternetBillTR" xml:space="preserve">
     <value>İnternet Faturası</value>
+  </data>
+  <data name="InvestmentEN" xml:space="preserve">
+    <value>Investment</value>
+  </data>
+  <data name="InvestmentTR" xml:space="preserve">
+    <value>Yatırım</value>
   </data>
   <data name="JanuaryEN" xml:space="preserve">
     <value>January</value>
@@ -434,18 +506,6 @@
   </data>
   <data name="MayTR" xml:space="preserve">
     <value>Mayıs</value>
-  </data>
-  <data name="MessageErrorEN" xml:space="preserve">
-    <value>Error</value>
-  </data>
-  <data name="MessageErrorTR" xml:space="preserve">
-    <value>Hata</value>
-  </data>
-  <data name="MessageInformationEN" xml:space="preserve">
-    <value>Information</value>
-  </data>
-  <data name="MessageInformationTR" xml:space="preserve">
-    <value>Bilgi</value>
   </data>
   <data name="MonthEN" xml:space="preserve">
     <value>Month</value>
@@ -560,6 +620,12 @@
   </data>
   <data name="SaleTR" xml:space="preserve">
     <value>Satış</value>
+  </data>
+  <data name="SavingEN" xml:space="preserve">
+    <value>Saving</value>
+  </data>
+  <data name="SavingTR" xml:space="preserve">
+    <value>Tasarruf</value>
   </data>
   <data name="ScenariosEN" xml:space="preserve">
     <value>Scenarios</value>
