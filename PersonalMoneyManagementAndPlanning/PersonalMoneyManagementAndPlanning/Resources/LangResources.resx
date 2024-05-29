@@ -123,6 +123,12 @@
   <data name="AccountTR" xml:space="preserve">
     <value>Hesap</value>
   </data>
+  <data name="AddAccountSuccesfulEN" xml:space="preserve">
+    <value>Account Added</value>
+  </data>
+  <data name="AddAccountSuccesfulTR" xml:space="preserve">
+    <value>Hesap Eklendi</value>
+  </data>
   <data name="AddEN" xml:space="preserve">
     <value>Add</value>
   </data>
@@ -230,6 +236,12 @@
   </data>
   <data name="CreditTR" xml:space="preserve">
     <value>Kredi</value>
+  </data>
+  <data name="CurrencyEN" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="CurrencyTR" xml:space="preserve">
+    <value>Birim</value>
   </data>
   <data name="DateEN" xml:space="preserve">
     <value>Date</value>
@@ -531,6 +543,12 @@
   <data name="NoAccountTR" xml:space="preserve">
     <value>Hesap Yok</value>
   </data>
+  <data name="NoEN" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoTR" xml:space="preserve">
+    <value>No</value>
+  </data>
   <data name="NovemberEN" xml:space="preserve">
     <value>November</value>
   </data>
@@ -656,6 +674,18 @@
   </data>
   <data name="SurnameTR" xml:space="preserve">
     <value>Soyad</value>
+  </data>
+  <data name="TargetEN" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="TargetTR" xml:space="preserve">
+    <value>Hedef</value>
+  </data>
+  <data name="TargetValueEN" xml:space="preserve">
+    <value>Target Value</value>
+  </data>
+  <data name="TargetValueTR" xml:space="preserve">
+    <value>Hedef Değeri</value>
   </data>
   <data name="TelevisionBillEN" xml:space="preserve">
     <value>Television Bill</value>

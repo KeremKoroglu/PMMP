@@ -47,14 +47,13 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
             string account = CmbAccount.Text == "NoAccount" || CmbAccount.Text == "Hesap Yok" ? "NoAccount" : CmbAccount.Text;
             if (RdbIncome.Checked)
             {
-                Database.AddIncome(TxtDescription.Text, TxtAmount.Text, CmbCategory.Text, account, DtpDate.Value.ToString("yyyy-MM-dd"));
-                MessageBox.Show(Lang.GetText("AddIncomeSuccesful"), Lang.GetText("Information") , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Database.AddIncome(TxtDescription.Text, TxtAmount.Text, CmbCategory.Text, account, DtpDate.Value.ToString("s"));
             }
             else
             {
-                Database.AddExpense(TxtDescription.Text, TxtAmount.Text, CmbCategory.Text, account, DtpDate.Value.ToString("yyyy-MM-dd"));
-                MessageBox.Show(Lang.GetText("AddExpenseSuccesful"), Lang.GetText("Information"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Database.AddExpense(TxtDescription.Text, TxtAmount.Text, CmbCategory.Text, account, DtpDate.Value.ToString("s"));              
             }
+            MessageBox.Show(Lang.GetText("AddIncomeSuccesful"), Lang.GetText("Information"), MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 
@@ -76,7 +75,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
             #region
             foreach (var item in Database.Accounts())
             {
-                CmbAccount.Items.Add(Lang.GetText(item));
+                CmbAccount.Items.Add(item);
             }
             CmbAccount.SelectedIndex = 0;
             CmbAccount.DropDownHeight = CmbAccount.ItemHeight * 10;

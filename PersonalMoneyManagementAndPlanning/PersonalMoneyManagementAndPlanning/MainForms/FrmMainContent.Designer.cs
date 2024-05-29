@@ -216,9 +216,9 @@
             this.CmbAccounts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbAccounts.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbAccounts.FormattingEnabled = true;
-            this.CmbAccounts.Location = new System.Drawing.Point(633, 45);
+            this.CmbAccounts.Location = new System.Drawing.Point(492, 45);
             this.CmbAccounts.Name = "CmbAccounts";
-            this.CmbAccounts.Size = new System.Drawing.Size(121, 35);
+            this.CmbAccounts.Size = new System.Drawing.Size(262, 35);
             this.CmbAccounts.TabIndex = 7;
             this.CmbAccounts.SelectedIndexChanged += new System.EventHandler(this.CmbAccounts_SelectedIndexChanged);
             // 
@@ -227,9 +227,9 @@
             this.CmbCalendar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCalendar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbCalendar.FormattingEnabled = true;
-            this.CmbCalendar.Location = new System.Drawing.Point(633, 3);
+            this.CmbCalendar.Location = new System.Drawing.Point(492, 3);
             this.CmbCalendar.Name = "CmbCalendar";
-            this.CmbCalendar.Size = new System.Drawing.Size(121, 35);
+            this.CmbCalendar.Size = new System.Drawing.Size(262, 35);
             this.CmbCalendar.TabIndex = 6;
             this.CmbCalendar.SelectedIndexChanged += new System.EventHandler(this.CmbCalendar_SelectedIndexChanged);
             // 

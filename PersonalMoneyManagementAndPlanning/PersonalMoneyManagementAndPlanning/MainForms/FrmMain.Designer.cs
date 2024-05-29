@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.MnsTopMenu = new System.Windows.Forms.MenuStrip();
+            this.TsmMainMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmAddIncomeExpense = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmScenarios = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmSettings = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +41,7 @@
             this.TsmReport = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmLang = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmAccounts = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsmMainMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmIncomeAndExpenseList = new System.Windows.Forms.ToolStripMenuItem();
             this.PnlBottomMenu = new System.Windows.Forms.Panel();
             this.PnlRightMenu = new System.Windows.Forms.Panel();
             this.PnlLeftMenu = new System.Windows.Forms.Panel();
@@ -54,6 +55,7 @@
             this.MnsTopMenu.AutoSize = false;
             this.MnsTopMenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.MnsTopMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TsmMainMenu,
             this.TsmAddIncomeExpense,
             this.TsmScenarios,
             this.TsmSettings,
@@ -64,13 +66,20 @@
             this.TsmReport,
             this.TsmLang,
             this.TsmAccounts,
-            this.TsmMainMenu});
+            this.TsmIncomeAndExpenseList});
             this.MnsTopMenu.Location = new System.Drawing.Point(0, 0);
             this.MnsTopMenu.Name = "MnsTopMenu";
             this.MnsTopMenu.ShowItemToolTips = true;
             this.MnsTopMenu.Size = new System.Drawing.Size(1904, 100);
             this.MnsTopMenu.TabIndex = 1;
             this.MnsTopMenu.Text = "menuStrip1";
+            // 
+            // TsmMainMenu
+            // 
+            this.TsmMainMenu.Name = "TsmMainMenu";
+            this.TsmMainMenu.Size = new System.Drawing.Size(74, 96);
+            this.TsmMainMenu.Text = "Ana Menü";
+            this.TsmMainMenu.Click += new System.EventHandler(this.TsmMainMenu_Click);
             // 
             // TsmAddIncomeExpense
             // 
@@ -137,13 +146,14 @@
             this.TsmAccounts.Name = "TsmAccounts";
             this.TsmAccounts.Size = new System.Drawing.Size(65, 96);
             this.TsmAccounts.Text = "Hesaplar";
+            this.TsmAccounts.Click += new System.EventHandler(this.TsmAccounts_Click);
             // 
-            // TsmMainMenu
+            // TsmIncomeAndExpenseList
             // 
-            this.TsmMainMenu.Name = "TsmMainMenu";
-            this.TsmMainMenu.Size = new System.Drawing.Size(74, 96);
-            this.TsmMainMenu.Text = "Ana Menü";
-            this.TsmMainMenu.Click += new System.EventHandler(this.TsmMainMenu_Click);
+            this.TsmIncomeAndExpenseList.Name = "TsmIncomeAndExpenseList";
+            this.TsmIncomeAndExpenseList.Size = new System.Drawing.Size(110, 96);
+            this.TsmIncomeAndExpenseList.Text = "Gelir Gider Listele";
+            this.TsmIncomeAndExpenseList.Click += new System.EventHandler(this.TsmIncomeAndExpenseList_Click);
             // 
             // PnlBottomMenu
             // 
@@ -221,5 +231,6 @@
         private System.Windows.Forms.Panel PnlFill;
         private System.Windows.Forms.ToolStripMenuItem TsmAccounts;
         private System.Windows.Forms.ToolStripMenuItem TsmMainMenu;
+        private System.Windows.Forms.ToolStripMenuItem TsmIncomeAndExpenseList;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace PersonalMoneyManagementAndPlanning.TopMenuForms
 {
-    partial class FrmScenarios
+    partial class FrmAccounts
     {
         /// <summary>
         /// Required designer variable.
@@ -29,38 +29,56 @@
         private void InitializeComponent()
         {
             this.PnlAddIncomeAndExpense = new System.Windows.Forms.Panel();
+            this.TxtNo = new System.Windows.Forms.TextBox();
+            this.LblNo = new System.Windows.Forms.Label();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.TxtDescription = new System.Windows.Forms.TextBox();
             this.LblDescription = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.Label();
             this.TxtName = new System.Windows.Forms.TextBox();
             this.LblCategory = new System.Windows.Forms.Label();
+            this.CmbCurrency = new System.Windows.Forms.ComboBox();
             this.CmbCategory = new System.Windows.Forms.ComboBox();
-            this.TxtTarget = new System.Windows.Forms.TextBox();
-            this.LblTarget = new System.Windows.Forms.Label();
-            this.TxtTargetValue = new System.Windows.Forms.TextBox();
-            this.LblTargetValue = new System.Windows.Forms.Label();
+            this.LblCurrency = new System.Windows.Forms.Label();
             this.PnlAddIncomeAndExpense.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlAddIncomeAndExpense
             // 
             this.PnlAddIncomeAndExpense.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PnlAddIncomeAndExpense.Controls.Add(this.TxtTargetValue);
-            this.PnlAddIncomeAndExpense.Controls.Add(this.LblTargetValue);
-            this.PnlAddIncomeAndExpense.Controls.Add(this.TxtTarget);
-            this.PnlAddIncomeAndExpense.Controls.Add(this.LblTarget);
+            this.PnlAddIncomeAndExpense.Controls.Add(this.TxtNo);
+            this.PnlAddIncomeAndExpense.Controls.Add(this.LblNo);
             this.PnlAddIncomeAndExpense.Controls.Add(this.BtnAdd);
             this.PnlAddIncomeAndExpense.Controls.Add(this.TxtDescription);
             this.PnlAddIncomeAndExpense.Controls.Add(this.LblDescription);
             this.PnlAddIncomeAndExpense.Controls.Add(this.LblName);
             this.PnlAddIncomeAndExpense.Controls.Add(this.TxtName);
             this.PnlAddIncomeAndExpense.Controls.Add(this.LblCategory);
+            this.PnlAddIncomeAndExpense.Controls.Add(this.CmbCurrency);
             this.PnlAddIncomeAndExpense.Controls.Add(this.CmbCategory);
+            this.PnlAddIncomeAndExpense.Controls.Add(this.LblCurrency);
             this.PnlAddIncomeAndExpense.Location = new System.Drawing.Point(478, 12);
             this.PnlAddIncomeAndExpense.Name = "PnlAddIncomeAndExpense";
             this.PnlAddIncomeAndExpense.Size = new System.Drawing.Size(533, 778);
-            this.PnlAddIncomeAndExpense.TabIndex = 17;
+            this.PnlAddIncomeAndExpense.TabIndex = 16;
+            // 
+            // TxtNo
+            // 
+            this.TxtNo.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TxtNo.Location = new System.Drawing.Point(229, 116);
+            this.TxtNo.Name = "TxtNo";
+            this.TxtNo.Size = new System.Drawing.Size(268, 44);
+            this.TxtNo.TabIndex = 15;
+            // 
+            // LblNo
+            // 
+            this.LblNo.AutoSize = true;
+            this.LblNo.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblNo.Location = new System.Drawing.Point(19, 119);
+            this.LblNo.Name = "LblNo";
+            this.LblNo.Size = new System.Drawing.Size(71, 36);
+            this.LblNo.TabIndex = 0;
+            this.LblNo.Text = "No :";
             // 
             // BtnAdd
             // 
@@ -71,6 +89,7 @@
             this.BtnAdd.TabIndex = 14;
             this.BtnAdd.Text = "Ekle";
             this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // TxtDescription
             // 
@@ -118,6 +137,17 @@
             this.LblCategory.TabIndex = 5;
             this.LblCategory.Text = "Kategori :";
             // 
+            // CmbCurrency
+            // 
+            this.CmbCurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbCurrency.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CmbCurrency.FormattingEnabled = true;
+            this.CmbCurrency.IntegralHeight = false;
+            this.CmbCurrency.Location = new System.Drawing.Point(229, 438);
+            this.CmbCurrency.Name = "CmbCurrency";
+            this.CmbCurrency.Size = new System.Drawing.Size(268, 44);
+            this.CmbCurrency.TabIndex = 8;
+            // 
             // CmbCategory
             // 
             this.CmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -129,51 +159,26 @@
             this.CmbCategory.Size = new System.Drawing.Size(268, 44);
             this.CmbCategory.TabIndex = 6;
             // 
-            // TxtTarget
+            // LblCurrency
             // 
-            this.TxtTarget.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtTarget.Location = new System.Drawing.Point(229, 420);
-            this.TxtTarget.Name = "TxtTarget";
-            this.TxtTarget.Size = new System.Drawing.Size(268, 44);
-            this.TxtTarget.TabIndex = 16;
+            this.LblCurrency.AutoSize = true;
+            this.LblCurrency.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblCurrency.Location = new System.Drawing.Point(19, 441);
+            this.LblCurrency.Name = "LblCurrency";
+            this.LblCurrency.Size = new System.Drawing.Size(105, 36);
+            this.LblCurrency.TabIndex = 7;
+            this.LblCurrency.Text = "Birim :";
             // 
-            // LblTarget
-            // 
-            this.LblTarget.AutoSize = true;
-            this.LblTarget.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblTarget.Location = new System.Drawing.Point(19, 423);
-            this.LblTarget.Name = "LblTarget";
-            this.LblTarget.Size = new System.Drawing.Size(109, 36);
-            this.LblTarget.TabIndex = 15;
-            this.LblTarget.Text = "Hedef :";
-            // 
-            // TxtTargetValue
-            // 
-            this.TxtTargetValue.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtTargetValue.Location = new System.Drawing.Point(229, 487);
-            this.TxtTargetValue.Name = "TxtTargetValue";
-            this.TxtTargetValue.Size = new System.Drawing.Size(268, 44);
-            this.TxtTargetValue.TabIndex = 18;
-            // 
-            // LblTargetValue
-            // 
-            this.LblTargetValue.AutoSize = true;
-            this.LblTargetValue.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblTargetValue.Location = new System.Drawing.Point(19, 490);
-            this.LblTargetValue.Name = "LblTargetValue";
-            this.LblTargetValue.Size = new System.Drawing.Size(203, 36);
-            this.LblTargetValue.TabIndex = 17;
-            this.LblTargetValue.Text = "Hedef Değeri :";
-            // 
-            // FrmScenarios
+            // FrmAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1488, 802);
             this.Controls.Add(this.PnlAddIncomeAndExpense);
-            this.Name = "FrmScenarios";
-            this.Text = "FrmScenarios";
+            this.Name = "FrmAccounts";
+            this.Text = "FrmAccounts";
+            this.Load += new System.EventHandler(this.FrmAccounts_Load);
             this.PnlAddIncomeAndExpense.ResumeLayout(false);
             this.PnlAddIncomeAndExpense.PerformLayout();
             this.ResumeLayout(false);
@@ -183,16 +188,16 @@
         #endregion
 
         private System.Windows.Forms.Panel PnlAddIncomeAndExpense;
+        private System.Windows.Forms.Label LblNo;
         private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.TextBox TxtDescription;
         private System.Windows.Forms.Label LblDescription;
+        private System.Windows.Forms.Label LblCategory;
+        private System.Windows.Forms.ComboBox CmbCurrency;
+        private System.Windows.Forms.ComboBox CmbCategory;
+        private System.Windows.Forms.Label LblCurrency;
+        private System.Windows.Forms.TextBox TxtNo;
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.TextBox TxtName;
-        private System.Windows.Forms.Label LblCategory;
-        private System.Windows.Forms.ComboBox CmbCategory;
-        private System.Windows.Forms.TextBox TxtTarget;
-        private System.Windows.Forms.Label LblTarget;
-        private System.Windows.Forms.TextBox TxtTargetValue;
-        private System.Windows.Forms.Label LblTargetValue;
     }
 }

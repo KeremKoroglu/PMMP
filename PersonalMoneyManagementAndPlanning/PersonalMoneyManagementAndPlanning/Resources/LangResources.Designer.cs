@@ -79,6 +79,24 @@ namespace PersonalMoneyManagementAndPlanning.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account Added.
+        /// </summary>
+        internal static string AddAccountSuccesfulEN {
+            get {
+                return ResourceManager.GetString("AddAccountSuccesfulEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hesap Eklendi.
+        /// </summary>
+        internal static string AddAccountSuccesfulTR {
+            get {
+                return ResourceManager.GetString("AddAccountSuccesfulTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add.
         /// </summary>
         internal static string AddEN {
@@ -399,6 +417,24 @@ namespace PersonalMoneyManagementAndPlanning.Resources {
         internal static string CreditTR {
             get {
                 return ResourceManager.GetString("CreditTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Currency.
+        /// </summary>
+        internal static string CurrencyEN {
+            get {
+                return ResourceManager.GetString("CurrencyEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Birim.
+        /// </summary>
+        internal static string CurrencyTR {
+            get {
+                return ResourceManager.GetString("CurrencyTR", resourceCulture);
             }
         }
         
@@ -1303,6 +1339,24 @@ namespace PersonalMoneyManagementAndPlanning.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        internal static string NoEN {
+            get {
+                return ResourceManager.GetString("NoEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        internal static string NoTR {
+            get {
+                return ResourceManager.GetString("NoTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to November.
         /// </summary>
         internal static string NovemberEN {
@@ -1677,6 +1731,42 @@ namespace PersonalMoneyManagementAndPlanning.Resources {
         internal static string SurnameTR {
             get {
                 return ResourceManager.GetString("SurnameTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target.
+        /// </summary>
+        internal static string TargetEN {
+            get {
+                return ResourceManager.GetString("TargetEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hedef.
+        /// </summary>
+        internal static string TargetTR {
+            get {
+                return ResourceManager.GetString("TargetTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target Value.
+        /// </summary>
+        internal static string TargetValueEN {
+            get {
+                return ResourceManager.GetString("TargetValueEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hedef Değeri.
+        /// </summary>
+        internal static string TargetValueTR {
+            get {
+                return ResourceManager.GetString("TargetValueTR", resourceCulture);
             }
         }
         

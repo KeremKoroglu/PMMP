@@ -47,7 +47,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
             #region
             foreach (var item in Database.Accounts())
             {
-                CmbAccounts.Items.Add(Lang.GetText(item));
+                CmbAccounts.Items.Add(item);
             }
             CmbAccounts.Items.Add(Lang.GetText("All"));
             CmbAccounts.SelectedIndex = 0;
