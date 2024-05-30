@@ -9,11 +9,15 @@ using System.Drawing;
 using System.Security.Principal;
 using System.Data;
 using System.Data.SqlClient;
+using Dapper.Contrib.Extensions;
+using Dapper;
+using static PersonalMoneyManagementAndPlanning.Classes.Database;
 
 namespace PersonalMoneyManagementAndPlanning.Classes
 {
     public static class Database
     {
+        private static readonly SqlConnection Con = new(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         public static readonly DatabaseManager Manager = new(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         private static readonly Authentication Auth = new(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         public static string Id;
@@ -103,6 +107,49 @@ namespace PersonalMoneyManagementAndPlanning.Classes
             return Auth.Login(tbUsers, "Email", email, "Password", password);
         }
 
+        // Get
+        #region
+        public static List<IncomeAndExpense> IncomeAndExpenseList(string account, string sort)
+        {
+            var iae = new List<IncomeAndExpense>();
+            if (Manager.IsThere(tbIncomes, "Account", ("Account", "=", account, null)) && Manager.IsThere(tbExpenses, "Account", ("Account", "=", account, null)))
+            {
+                var incomes = Con.Query<IncomeAndExpense>($"SELECT Id, UserId, Description, Amount, Category, Account, Scenario, Date, 'Income' AS TableName FROM {tbIncomes} WHERE UserId = {Id} AND Account = '{account}'").ToList();
+                var expenses = Con.Query<IncomeAndExpense>($"SELECT Id, UserId, Description, Amount, Category, Account, Scenario, Date, 'Expense' AS TableName FROM {tbExpenses} WHERE UserId = {Id} AND Account = '{account}'").ToList();
+                iae = incomes.Concat(expenses).ToList();
+            }
+            else if (Manager.IsThere(tbExpenses, "Account", ("Account", "=", account, null)) && !Manager.IsThere(tbExpenses, "Account", ("Account", "=", account, null)))
+            {
+                var incomes = Con.Query<IncomeAndExpense>($"SELECT Id, UserId, Description, Amount, Category, Account, Scenario, Date, 'Income' AS TableName FROM {tbIncomes} WHERE UserId = {Id} AND Account = '{account}'").ToList();
+                iae = incomes.ToList();
+            }
+            else if (!Manager.IsThere(tbExpenses, "Account", ("Account", "=", account, null)) && Manager.IsThere(tbExpenses, "Account", ("Account", "=", account, null)))
+            {
+                var expenses = Con.Query<IncomeAndExpense>($"SELECT Id, UserId, Description, Amount, Category, Account, Scenario, Date, 'Expense' AS TableName FROM {tbExpenses} WHERE UserId = {Id} AND Account = '{account}'").ToList();
+                iae = expenses.ToList();
+            }
+            else
+            {
+                return null;
+            }
+
+            return sort switch
+            {
+                "Tarih" or "Date" => iae.OrderBy(t => t.Date).ToList(),
+                "Tutar" or "Amount" => iae.OrderBy(t => t.Amount).ToList(),
+                "Kategori" or "Category" => iae.OrderBy(t => t.Category).ToList(),
+                "Hesap" or "Account" => iae.OrderBy(t => t.Account).ToList(),
+                _ => iae.ToList(),
+            };
+        }
+
+        public static string CurrencySymbol(string account) // Tümü Seçildiğinde Ana Birim Cinsinden Hesapla
+        {
+            string currency = Manager.GetColumn(tbAccounts, "Currency", ("Name", "=", account, null))[0];
+            return Manager.GetColumn(tbCC, "Symbol", ("Name", "=", currency, null))[0];
+        }
+        #endregion
+
         // Additions
         #region
         public static void AddIncome(string description, string amount, string category, string account, string date)
@@ -146,30 +193,6 @@ namespace PersonalMoneyManagementAndPlanning.Classes
         public static string[] Accounts()
         {
             return Manager.GetColumn(tbAccounts, "Name", ("UserId", "=", Id, null));
-        }
-
-        public static DataTable IncomeAndExpense()
-        {
-            string query = $"SELECT * FROM {tbIncomes} UNION ALL SELECT * FROM {tbExpenses}";
-
-            SqlDataAdapter adapter = new SqlDataAdapter(query, ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
-
-            dataTable.Columns.Remove("Id");
-            dataTable.Columns.Remove("UserId");
-
-            return dataTable;
-        }
-
-        public static DataTable Incomes()
-        {
-            return Manager.GetTable(tbIncomes);
-        }
-
-        public static DataTable Expenses()
-        {
-            return Manager.GetTable(tbExpenses);
         }
         #endregion
 
@@ -503,7 +526,50 @@ namespace PersonalMoneyManagementAndPlanning.Classes
             return total;
         }
         #endregion
-      
+
+        #endregion
+
+        // TABLES
+        #region
+        public class Income
+        {
+            [Key]
+            public int Id { get; set; }
+            public int UserId { get; set; }
+            public string Description { get; set; }
+            public decimal Amount { get; set; }
+            public string Category { get; set; }
+            public string Account { get; set; }
+            public string Scenario { get; set; }
+            public DateTime Date { get; set; }
+        }
+
+        public class Expense
+        {
+            [Key]
+            public int Id { get; set; }
+            public int UserId { get; set; }
+            public string Description { get; set; }
+            public decimal Amount { get; set; }
+            public string Category { get; set; }
+            public string Account { get; set; }
+            public string Scenario { get; set; }
+            public DateTime Date { get; set; }
+        }
+
+        public class IncomeAndExpense
+        {
+            [Key]
+            public int Id { get; set; }
+            public int UserId { get; set; }
+            public string Description { get; set; }
+            public decimal Amount { get; set; }
+            public string Category { get; set; }
+            public string Account { get; set; }
+            public string Scenario { get; set; }
+            public DateTime Date { get; set; }
+            public string TableName { get; set; }
+        }
         #endregion
     }
 }

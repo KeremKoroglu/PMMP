@@ -546,6 +546,12 @@
   <data name="NoEN" xml:space="preserve">
     <value>No</value>
   </data>
+  <data name="NoIncomeOrExpenseEN" xml:space="preserve">
+    <value>There Is No Income Or Expense</value>
+  </data>
+  <data name="NoIncomeOrExpenseTR" xml:space="preserve">
+    <value>Herhangi Bir Gelir Gider Yok</value>
+  </data>
   <data name="NoTR" xml:space="preserve">
     <value>No</value>
   </data>

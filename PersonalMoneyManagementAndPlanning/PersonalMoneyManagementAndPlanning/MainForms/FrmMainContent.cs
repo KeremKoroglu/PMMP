@@ -253,11 +253,12 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
         #region
         void ReportCalculation(decimal incomes, decimal expenses)
         {
+            string symbol = Database.CurrencySymbol(CmbAccounts.Text);
             decimal total = incomes - expenses;
 
-            LblIncome.Text = Lang.GetText("Income") + " : " + incomes + "₺";
-            LblExpense.Text = Lang.GetText("Expense") + " : " + expenses + "₺";
-            LblTotal.Text = Lang.GetText("Total") + " : " + total + "₺";
+            LblIncome.Text = Lang.GetText("Income") + " : " + incomes + symbol;
+            LblExpense.Text = Lang.GetText("Expense") + " : " + expenses + symbol;
+            LblTotal.Text = Lang.GetText("Total") + " : " + total + symbol;
 
             CpbTotal.Maximum = Convert.ToInt32(incomes + expenses);
             CpbTotal.Value = Math.Max(0, Convert.ToInt32(total));

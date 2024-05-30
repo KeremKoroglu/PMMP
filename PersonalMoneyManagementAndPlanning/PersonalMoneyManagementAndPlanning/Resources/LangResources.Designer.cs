@@ -1348,6 +1348,24 @@ namespace PersonalMoneyManagementAndPlanning.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There Is No Income Or Expense.
+        /// </summary>
+        internal static string NoIncomeOrExpenseEN {
+            get {
+                return ResourceManager.GetString("NoIncomeOrExpenseEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Herhangi Bir Gelir Gider Yok.
+        /// </summary>
+        internal static string NoIncomeOrExpenseTR {
+            get {
+                return ResourceManager.GetString("NoIncomeOrExpenseTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No.
         /// </summary>
         internal static string NoTR {
