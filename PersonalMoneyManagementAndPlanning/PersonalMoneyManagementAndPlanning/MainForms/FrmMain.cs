@@ -24,6 +24,8 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
         private readonly FrmScenarios Scenarios = new();
         private readonly FrmAccounts Accounts = new();
         private readonly FrmIncomeAndExpenseList IncomeAndExpenseList = new();
+        private readonly FrmScenarioList ScenarioList = new();
+        private readonly FrmAccountList AccountList = new();
         public FrmLogin Login;
         #endregion
 
@@ -67,6 +69,16 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
         {
             LoadIncomeAndExpenseList();
         }
+
+        private void TsmScenarioList_Click(object sender, EventArgs e)
+        {
+            LoadScenarioList();
+        }
+
+        private void TsmAccountList_Click(object sender, EventArgs e)
+        {
+            LoadAccountList();
+        }
         #endregion
 
         // FUNCTION
@@ -93,6 +105,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
             MainContent.FormBorderStyle = FormBorderStyle.None;
             MainContent.Dock = DockStyle.Fill;
             MainContent.Show();
+            MainContent.GetValues();
         }
 
         void LoadIncomeAndExpense()
@@ -103,6 +116,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
             IncomeAndExpense.FormBorderStyle = FormBorderStyle.None;
             IncomeAndExpense.Dock = DockStyle.Fill;
             IncomeAndExpense.Show();
+            IncomeAndExpense.GetValues();
         }
 
         void LoadScenarios()
@@ -113,6 +127,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
             Scenarios.FormBorderStyle = FormBorderStyle.None;
             Scenarios.Dock = DockStyle.Fill;
             Scenarios.Show();
+            Scenarios.GetValues();
         }
 
         void LoadAccounts()
@@ -123,6 +138,7 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
             Accounts.FormBorderStyle = FormBorderStyle.None;
             Accounts.Dock = DockStyle.Fill;
             Accounts.Show();
+            Accounts.GetValues();
         }
 
         void LoadIncomeAndExpenseList()
@@ -133,6 +149,29 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
             IncomeAndExpenseList.FormBorderStyle = FormBorderStyle.None;
             IncomeAndExpenseList.Dock = DockStyle.Fill;
             IncomeAndExpenseList.Show();
+            IncomeAndExpenseList.GetValues();
+        }
+
+        void LoadScenarioList()
+        {
+            PnlFill.Controls.Clear();
+            ScenarioList.TopLevel = false;
+            PnlFill.Controls.Add(ScenarioList);
+            ScenarioList.FormBorderStyle = FormBorderStyle.None;
+            ScenarioList.Dock = DockStyle.Fill;
+            ScenarioList.Show();
+            ScenarioList.GetValues();
+        }
+
+        void LoadAccountList()
+        {
+            PnlFill.Controls.Clear();
+            AccountList.TopLevel = false;
+            PnlFill.Controls.Add(AccountList);
+            AccountList.FormBorderStyle = FormBorderStyle.None;
+            AccountList.Dock = DockStyle.Fill;
+            AccountList.Show();
+            AccountList.GetValues();
         }
         #endregion
 

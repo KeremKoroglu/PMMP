@@ -40,20 +40,94 @@
       <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
     </Reference>
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+      <HintPath>..\packages\Dapper.2.1.35\lib\net461\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="Dapper.Contrib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.Contrib.2.0.78\lib\net461\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="SqlLibrary">
       <HintPath>..\..\..\Class Library\SqlLibrary\SqlLibrary\bin\Debug\SqlLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.Data.8.0.0\lib\net462\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,7 +135,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
@@ -71,6 +144,12 @@
   <ItemGroup>
     <Compile Include="Classes\Database.cs" />
     <Compile Include="Classes\Lang.cs" />
+    <Compile Include="ListEditForms\FrmIncomeAndExpenseListEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListEditForms\FrmIncomeAndExpenseListEdit.Designer.cs">
+      <DependentUpon>FrmIncomeAndExpenseListEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +161,12 @@
     </Compile>
     <Compile Include="LoginForms\FrmRegister.Designer.cs">
       <DependentUpon>FrmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopMenuForms\FrmAccountList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopMenuForms\FrmAccountList.Designer.cs">
+      <DependentUpon>FrmAccountList.cs</DependentUpon>
     </Compile>
     <Compile Include="TopMenuForms\FrmAccounts.cs">
       <SubType>Form</SubType>
@@ -120,17 +205,29 @@
     <Compile Include="TopMenuForms\FrmIncomeAndExpenseList.Designer.cs">
       <DependentUpon>FrmIncomeAndExpenseList.cs</DependentUpon>
     </Compile>
+    <Compile Include="TopMenuForms\FrmScenarioList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopMenuForms\FrmScenarioList.Designer.cs">
+      <DependentUpon>FrmScenarioList.cs</DependentUpon>
+    </Compile>
     <Compile Include="TopMenuForms\FrmScenarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TopMenuForms\FrmScenarios.Designer.cs">
       <DependentUpon>FrmScenarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ListEditForms\FrmIncomeAndExpenseListEdit.resx">
+      <DependentUpon>FrmIncomeAndExpenseListEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForms\FrmRegister.resx">
       <DependentUpon>FrmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopMenuForms\FrmAccountList.resx">
+      <DependentUpon>FrmAccountList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TopMenuForms\FrmAccounts.resx">
       <DependentUpon>FrmAccounts.cs</DependentUpon>
@@ -160,6 +257,9 @@
     </Compile>
     <EmbeddedResource Include="TopMenuForms\FrmIncomeAndExpenseList.resx">
       <DependentUpon>FrmIncomeAndExpenseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopMenuForms\FrmScenarioList.resx">
+      <DependentUpon>FrmScenarioList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TopMenuForms\FrmScenarios.resx">
       <DependentUpon>FrmScenarios.cs</DependentUpon>

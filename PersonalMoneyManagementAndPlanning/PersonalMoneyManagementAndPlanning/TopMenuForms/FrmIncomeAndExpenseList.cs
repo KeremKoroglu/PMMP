@@ -19,12 +19,10 @@ namespace PersonalMoneyManagementAndPlanning.TopMenuForms
     {
         // VALUE
         #region
-        private readonly int grbWidth = 1496, grbHeight = 250; // 1473 185
-        private readonly int pnlWidth = 1467, pnlHeight = 60; // 1467 45
-        private readonly int pnlLowerWidth = 733, pnlLowerHeight = 45; // 733 45
+        private readonly int grbWidth = 1496, grbHeight = 250;
+        private readonly int pnlWidth = 1467, pnlHeight = 60;
+        private readonly int pnlLowerWidth = 744, pnlLowerHeight = 45;
         private readonly int fontSize = 24, fontSizeDescription = 18, fontSizeAmount = 36;
-
-
         #endregion
 
         // FORM 
@@ -38,18 +36,19 @@ namespace PersonalMoneyManagementAndPlanning.TopMenuForms
         {
             // LANG
             #region
-            foreach (var item in Database.Accounts())
+            CmbAccount.Items.Clear();
+            foreach (var item in Database.AccountList())
             {
-                CmbAccount.Items.Add(item);
+                CmbAccount.Items.Add(item.Name);
             }
             CmbAccount.SelectedIndex = 0;
             CmbAccount.DropDownHeight = CmbAccount.ItemHeight * 10;
-
+            CmbSort.Items.Clear();
             CmbSort.Items.Add(Lang.GetText("Date"));
             CmbSort.Items.Add(Lang.GetText("Amount"));
             CmbSort.Items.Add(Lang.GetText("Category"));
-            CmbSort.Items.Add(Lang.GetText("Account"));
             CmbSort.SelectedIndex = 0;
+            CmbSort.DropDownHeight = CmbAccount.ItemHeight * 10;
             #endregion
 
             GetValues();
@@ -71,7 +70,7 @@ namespace PersonalMoneyManagementAndPlanning.TopMenuForms
 
         // FUNCTION
         #region
-        void GetValues()
+        public void GetValues()
         {
             FlpIncomeAndExpenseList.Controls.Clear();
             if (Database.IncomeAndExpenseList(CmbAccount.Text, CmbSort.Text) == null)
@@ -92,8 +91,8 @@ namespace PersonalMoneyManagementAndPlanning.TopMenuForms
                     string date = $"{item.Date.Day} {Lang.GetMonths()[item.Date.Month]}";
                     string account = item.Account;
                     string desciription = item.Description;
-                    string category = item.Category;
-                    string amount = item.Amount.ToString();
+                    string category = Lang.GetText(item.Category);
+                    string amount = item.Amount + Database.CurrencySymbol(account);
 
                     // GroupBoxs
                     #region
@@ -191,13 +190,12 @@ namespace PersonalMoneyManagementAndPlanning.TopMenuForms
                         Dock = DockStyle.Fill,
                         TextAlign = ContentAlignment.MiddleRight,
                         Font = new System.Drawing.Font("Times New Roman", fontSizeAmount, FontStyle.Bold),
-                        Text = amount + Database.CurrencySymbol(account)
+                        Text = amount
                     };
                     pnlBottomRight.Controls.Add(lblAmount);
                     #endregion
                 }
-            }
-            
+            }          
         }
         #endregion
     }

@@ -142,6 +142,24 @@ namespace PersonalMoneyManagementAndPlanning.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Scenario Added.
+        /// </summary>
+        internal static string AddScenarioSuccesfulEN {
+            get {
+                return ResourceManager.GetString("AddScenarioSuccesfulEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senaryo Eklendi.
+        /// </summary>
+        internal static string AddScenarioSuccesfulTR {
+            get {
+                return ResourceManager.GetString("AddScenarioSuccesfulTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ekle.
         /// </summary>
         internal static string AddTR {
@@ -291,6 +309,24 @@ namespace PersonalMoneyManagementAndPlanning.Resources {
         internal static string BillTR {
             get {
                 return ResourceManager.GetString("BillTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buy Plan.
+        /// </summary>
+        internal static string BuyPlanEN {
+            get {
+                return ResourceManager.GetString("BuyPlanEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Satın Alma Planı.
+        /// </summary>
+        internal static string BuyPlanTR {
+            get {
+                return ResourceManager.GetString("BuyPlanTR", resourceCulture);
             }
         }
         
@@ -489,6 +525,24 @@ namespace PersonalMoneyManagementAndPlanning.Resources {
         internal static string DayTR {
             get {
                 return ResourceManager.GetString("DayTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debt Payment.
+        /// </summary>
+        internal static string DebtPaymentEN {
+            get {
+                return ResourceManager.GetString("DebtPaymentEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Borç Ödemesi.
+        /// </summary>
+        internal static string DebtPaymentTR {
+            get {
+                return ResourceManager.GetString("DebtPaymentTR", resourceCulture);
             }
         }
         
@@ -1366,6 +1420,24 @@ namespace PersonalMoneyManagementAndPlanning.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No Scenarios.
+        /// </summary>
+        internal static string NoScenariosEN {
+            get {
+                return ResourceManager.GetString("NoScenariosEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senaryo Yok.
+        /// </summary>
+        internal static string NoScenariosTR {
+            get {
+                return ResourceManager.GetString("NoScenariosTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No.
         /// </summary>
         internal static string NoTR {
@@ -1533,6 +1605,42 @@ namespace PersonalMoneyManagementAndPlanning.Resources {
         internal static string PhoneNumberTR {
             get {
                 return ResourceManager.GetString("PhoneNumberTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Planning.
+        /// </summary>
+        internal static string PlanningEN {
+            get {
+                return ResourceManager.GetString("PlanningEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Planlama.
+        /// </summary>
+        internal static string PlanningTR {
+            get {
+                return ResourceManager.GetString("PlanningTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Process.
+        /// </summary>
+        internal static string ProcessEN {
+            get {
+                return ResourceManager.GetString("ProcessEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to İlerleme.
+        /// </summary>
+        internal static string ProcessTR {
+            get {
+                return ResourceManager.GetString("ProcessTR", resourceCulture);
             }
         }
         

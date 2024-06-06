@@ -45,9 +45,9 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
 
             // Accounts ComboBox
             #region
-            foreach (var item in Database.Accounts())
+            foreach (var item in Database.AccountList())
             {
-                CmbAccounts.Items.Add(item);
+                CmbAccounts.Items.Add(item.Name);
             }
             CmbAccounts.Items.Add(Lang.GetText("All"));
             CmbAccounts.SelectedIndex = 0;

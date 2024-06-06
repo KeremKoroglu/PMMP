@@ -24,7 +24,33 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
         private void FrmIncomeAndExpense_Load(object sender, EventArgs e)
         {
             GetValues();
+        }
+        #endregion
 
+        // BUTTON
+        #region
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            if (RdbAccount.Checked)
+            {
+            }
+            
+            if (RdbIncome.Checked)
+            {
+                Database.AddIncome(TxtDescription.Text, TxtAmount.Text, CmbCategory.Text, CmbAccount.Text, DtpDate.Value.ToString("s"));
+            }
+            else
+            {
+                Database.AddExpense(TxtDescription.Text, TxtAmount.Text, CmbCategory.Text, CmbAccount.Text, DtpDate.Value.ToString("s"));              
+            }
+            MessageBox.Show(Lang.GetText("AddIncomeSuccesful"), Lang.GetText("Information"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        #endregion
+
+        // FUNCTION
+        #region
+        public void GetValues()
+        {
             // Lang
             #region
             LblType.Text = Lang.GetText("Type") + " :";
@@ -37,32 +63,10 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
             LblDescription.Text = Lang.GetText("Description") + " :";
             BtnAdd.Text = Lang.GetText("Add");
             #endregion
-        }
-        #endregion
 
-        // BUTTON
-        #region
-        private void BtnAdd_Click(object sender, EventArgs e)
-        {
-            string account = CmbAccount.Text == "NoAccount" || CmbAccount.Text == "Hesap Yok" ? "NoAccount" : CmbAccount.Text;
-            if (RdbIncome.Checked)
-            {
-                Database.AddIncome(TxtDescription.Text, TxtAmount.Text, CmbCategory.Text, account, DtpDate.Value.ToString("s"));
-            }
-            else
-            {
-                Database.AddExpense(TxtDescription.Text, TxtAmount.Text, CmbCategory.Text, account, DtpDate.Value.ToString("s"));              
-            }
-            MessageBox.Show(Lang.GetText("AddIncomeSuccesful"), Lang.GetText("Information"), MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-        #endregion
-
-        // FUNCTION
-        #region
-        void GetValues()
-        {
             // Category ComboBox
             #region
+            CmbCategory.Items.Clear();
             foreach (var item in Database.IncomeAndExpenseCategories())
             {
                 CmbCategory.Items.Add(Lang.GetText(item));
@@ -73,9 +77,10 @@ namespace PersonalMoneyManagementAndPlanning.MainForms
 
             // Account ComboBox
             #region
-            foreach (var item in Database.Accounts())
+            CmbAccount.Items.Clear();
+            foreach (var item in Database.AccountList())
             {
-                CmbAccount.Items.Add(item);
+                CmbAccount.Items.Add(item.Name);
             }
             CmbAccount.SelectedIndex = 0;
             CmbAccount.DropDownHeight = CmbAccount.ItemHeight * 10;

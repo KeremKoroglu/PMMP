@@ -144,6 +144,12 @@
   <data name="AddIncomeSuccesfulTR" xml:space="preserve">
     <value>Gelir Eklendi</value>
   </data>
+  <data name="AddScenarioSuccesfulEN" xml:space="preserve">
+    <value>Scenario Added</value>
+  </data>
+  <data name="AddScenarioSuccesfulTR" xml:space="preserve">
+    <value>Senaryo Eklendi</value>
+  </data>
   <data name="AddTR" xml:space="preserve">
     <value>Ekle</value>
   </data>
@@ -194,6 +200,12 @@
   </data>
   <data name="BillTR" xml:space="preserve">
     <value>Fatura</value>
+  </data>
+  <data name="BuyPlanEN" xml:space="preserve">
+    <value>Buy Plan</value>
+  </data>
+  <data name="BuyPlanTR" xml:space="preserve">
+    <value>Satın Alma Planı</value>
   </data>
   <data name="CancelEN" xml:space="preserve">
     <value>Cancel</value>
@@ -260,6 +272,12 @@
   </data>
   <data name="DayTR" xml:space="preserve">
     <value>Gün</value>
+  </data>
+  <data name="DebtPaymentEN" xml:space="preserve">
+    <value>Debt Payment</value>
+  </data>
+  <data name="DebtPaymentTR" xml:space="preserve">
+    <value>Borç Ödemesi</value>
   </data>
   <data name="DecemberEN" xml:space="preserve">
     <value>December</value>
@@ -552,6 +570,12 @@
   <data name="NoIncomeOrExpenseTR" xml:space="preserve">
     <value>Herhangi Bir Gelir Gider Yok</value>
   </data>
+  <data name="NoScenariosEN" xml:space="preserve">
+    <value>No Scenarios</value>
+  </data>
+  <data name="NoScenariosTR" xml:space="preserve">
+    <value>Senaryo Yok</value>
+  </data>
   <data name="NoTR" xml:space="preserve">
     <value>No</value>
   </data>
@@ -608,6 +632,18 @@
   </data>
   <data name="PhoneNumberTR" xml:space="preserve">
     <value>Telefon</value>
+  </data>
+  <data name="PlanningEN" xml:space="preserve">
+    <value>Planning</value>
+  </data>
+  <data name="PlanningTR" xml:space="preserve">
+    <value>Planlama</value>
+  </data>
+  <data name="ProcessEN" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="ProcessTR" xml:space="preserve">
+    <value>İlerleme</value>
   </data>
   <data name="RegisterEN" xml:space="preserve">
     <value>Register</value>

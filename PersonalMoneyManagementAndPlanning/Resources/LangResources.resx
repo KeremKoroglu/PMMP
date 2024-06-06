@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountEN" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="AccountTR" xml:space="preserve">
+    <value>Hesap</value>
+  </data>
+  <data name="AddAccountSuccesfulEN" xml:space="preserve">
+    <value>Account Added</value>
+  </data>
+  <data name="AddAccountSuccesfulTR" xml:space="preserve">
+    <value>Hesap Eklendi</value>
+  </data>
+  <data name="AddEN" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddExpenseSuccesfulEN" xml:space="preserve">
+    <value>Expense Added</value>
+  </data>
+  <data name="AddExpenseSuccesfulTR" xml:space="preserve">
+    <value>Gider Eklendi</value>
+  </data>
+  <data name="AddIncomeSuccesfulEN" xml:space="preserve">
+    <value>Income Added</value>
+  </data>
+  <data name="AddIncomeSuccesfulTR" xml:space="preserve">
+    <value>Gelir Eklendi</value>
+  </data>
+  <data name="AddScenarioSuccesfulEN" xml:space="preserve">
+    <value>Scenario Added</value>
+  </data>
+  <data name="AddScenarioSuccesfulTR" xml:space="preserve">
+    <value>Senaryo Eklendi</value>
+  </data>
+  <data name="AddTR" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="AllEN" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AllTR" xml:space="preserve">
+    <value>Tümü</value>
+  </data>
+  <data name="AmountEN" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="AmountTR" xml:space="preserve">
+    <value>Tutar</value>
+  </data>
+  <data name="AprilEN" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="AprilTR" xml:space="preserve">
+    <value>Nisan</value>
+  </data>
+  <data name="AugustEN" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="AugustTR" xml:space="preserve">
+    <value>Ağustos</value>
+  </data>
+  <data name="BackEN" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BackTR" xml:space="preserve">
+    <value>Geri</value>
+  </data>
+  <data name="BankAccountEN" xml:space="preserve">
+    <value>Bank Account</value>
+  </data>
+  <data name="BankAccountTR" xml:space="preserve">
+    <value>Banka Hesabı</value>
+  </data>
+  <data name="BankCardEN" xml:space="preserve">
+    <value>Bank Card</value>
+  </data>
+  <data name="BankCardTR" xml:space="preserve">
+    <value>Banka Kartı</value>
+  </data>
+  <data name="BillEN" xml:space="preserve">
+    <value>Bill</value>
+  </data>
+  <data name="BillTR" xml:space="preserve">
+    <value>Fatura</value>
+  </data>
+  <data name="BuyPlanEN" xml:space="preserve">
+    <value>Buy Plan</value>
+  </data>
+  <data name="BuyPlanTR" xml:space="preserve">
+    <value>Satın Alma Planı</value>
+  </data>
+  <data name="CancelEN" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CancelTR" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="CashEN" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="CashTR" xml:space="preserve">
+    <value>Nakit</value>
+  </data>
+  <data name="CategoryEN" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="CategoryTR" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="CharityEN" xml:space="preserve">
+    <value>Charity</value>
+  </data>
+  <data name="CharityTR" xml:space="preserve">
+    <value>Bağış</value>
+  </data>
+  <data name="ClothingEN" xml:space="preserve">
+    <value>Clothing</value>
+  </data>
+  <data name="ClothingTR" xml:space="preserve">
+    <value>Giyim</value>
+  </data>
+  <data name="CreditCardEN" xml:space="preserve">
+    <value>Credit Card</value>
+  </data>
+  <data name="CreditCardTR" xml:space="preserve">
+    <value>Kredi Kartı</value>
+  </data>
+  <data name="CreditEN" xml:space="preserve">
+    <value>Credit</value>
+  </data>
+  <data name="CreditTR" xml:space="preserve">
+    <value>Kredi</value>
+  </data>
+  <data name="CurrencyEN" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="CurrencyTR" xml:space="preserve">
+    <value>Birim</value>
+  </data>
+  <data name="DateEN" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DateOfBirthEN" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="DateOfBirthTR" xml:space="preserve">
+    <value>Doğum Tarihi</value>
+  </data>
+  <data name="DateTR" xml:space="preserve">
+    <value>Tarih</value>
+  </data>
+  <data name="DayEN" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="DayTR" xml:space="preserve">
+    <value>Gün</value>
+  </data>
+  <data name="DebtPaymentEN" xml:space="preserve">
+    <value>Debt Payment</value>
+  </data>
+  <data name="DebtPaymentTR" xml:space="preserve">
+    <value>Borç Ödemesi</value>
+  </data>
+  <data name="DecemberEN" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="DecemberTR" xml:space="preserve">
+    <value>Aralık</value>
+  </data>
+  <data name="DescriptionEN" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DescriptionTR" xml:space="preserve">
+    <value>Açıklama</value>
+  </data>
+  <data name="DistributionEN" xml:space="preserve">
+    <value>Distribution</value>
+  </data>
+  <data name="DistributionTR" xml:space="preserve">
+    <value>Dağılım</value>
+  </data>
+  <data name="EarningEN" xml:space="preserve">
+    <value>Earning</value>
+  </data>
+  <data name="EarningTR" xml:space="preserve">
+    <value>Kazanç</value>
+  </data>
+  <data name="EducationEN" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="EducationTR" xml:space="preserve">
+    <value>Eğitim</value>
+  </data>
+  <data name="ElectricityBillEN" xml:space="preserve">
+    <value>Electricity Bill</value>
+  </data>
+  <data name="ElectricityBillTR" xml:space="preserve">
+    <value>Elektrik Faturası</value>
+  </data>
+  <data name="EmailEN" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailTR" xml:space="preserve">
+    <value>Eposta</value>
+  </data>
+  <data name="EntertainmentEN" xml:space="preserve">
+    <value>Entertainment</value>
+  </data>
+  <data name="EntertainmentTR" xml:space="preserve">
+    <value>Eğlence</value>
+  </data>
+  <data name="ErrorEmailConflictEN" xml:space="preserve">
+    <value>The Email You Entered is Registered in the System</value>
+  </data>
+  <data name="ErrorEmailConflictTR" xml:space="preserve">
+    <value>Girdiğiniz Eposta Sistemde Kayıtlı</value>
+  </data>
+  <data name="ErrorEN" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorLoginEN" xml:space="preserve">
+    <value>Email or Password is Incorrect</value>
+  </data>
+  <data name="ErrorLoginTR" xml:space="preserve">
+    <value>Eposta veya Parola Yanlış</value>
+  </data>
+  <data name="ErrorMismatchedPasswordEN" xml:space="preserve">
+    <value>Please Review Your Password</value>
+  </data>
+  <data name="ErrorMismatchedPasswordHeaderEN" xml:space="preserve">
+    <value>Mismatched Password</value>
+  </data>
+  <data name="ErrorMismatchedPasswordHeaderTR" xml:space="preserve">
+    <value>Uyuşmayan Parola</value>
+  </data>
+  <data name="ErrorMismatchedPasswordTR" xml:space="preserve">
+    <value>Lütfen Parolanızı Gözden Geçirin</value>
+  </data>
+  <data name="ErrorMissingEmailEN" xml:space="preserve">
+    <value>Please Enter Your Email</value>
+  </data>
+  <data name="ErrorMissingEmailTR" xml:space="preserve">
+    <value>Lütfen Epostanızı Girin</value>
+  </data>
+  <data name="ErrorMissingHeaderEN" xml:space="preserve">
+    <value>Missing Information</value>
+  </data>
+  <data name="ErrorMissingHeaderTR" xml:space="preserve">
+    <value>Eksik Bilgi</value>
+  </data>
+  <data name="ErrorMissingNameEN" xml:space="preserve">
+    <value>Please Enter Your Name</value>
+  </data>
+  <data name="ErrorMissingNameTR" xml:space="preserve">
+    <value>Lütfen Adınızı Girin</value>
+  </data>
+  <data name="ErrorMissingPasswordAgainEN" xml:space="preserve">
+    <value>Please Enter Your Password Again To Verify </value>
+  </data>
+  <data name="ErrorMissingPasswordAgainTR" xml:space="preserve">
+    <value>Lütfen Şifrenizi Doğrulamak İçin Tekrar Girin</value>
+  </data>
+  <data name="ErrorMissingPasswordEN" xml:space="preserve">
+    <value>Please Enter Your Password</value>
+  </data>
+  <data name="ErrorMissingPasswordTR" xml:space="preserve">
+    <value>Lütfen Şifrenizi Girin</value>
+  </data>
+  <data name="ErrorMissingPhoneNumberEN" xml:space="preserve">
+    <value>Please Enter Your Phone Number</value>
+  </data>
+  <data name="ErrorMissingPhoneNumberTR" xml:space="preserve">
+    <value>Lütfen Telefon Numaranızı Girin</value>
+  </data>
+  <data name="ErrorMissingSurnameEN" xml:space="preserve">
+    <value>Please Enter Your Surname </value>
+  </data>
+  <data name="ErrorMissingSurnameTR" xml:space="preserve">
+    <value>Lütfen Soyadınızı Girin</value>
+  </data>
+  <data name="ErrorTR" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="ErrorYear0EN" xml:space="preserve">
+    <value>Date Cannot Be 0!</value>
+  </data>
+  <data name="ErrorYear0TR" xml:space="preserve">
+    <value>Tarih 0 Olamaz!</value>
+  </data>
+  <data name="ErrorYear10000EN" xml:space="preserve">
+    <value>Date Cannot Be 10000!</value>
+  </data>
+  <data name="ErrorYear10000TR" xml:space="preserve">
+    <value>Tarih 10000 Olamaz!</value>
+  </data>
+  <data name="ExitEN" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="ExitTR" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="ExpenseEN" xml:space="preserve">
+    <value>Expense</value>
+  </data>
+  <data name="ExpenseTR" xml:space="preserve">
+    <value>Gider</value>
+  </data>
+  <data name="FebruaryEN" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="FebruaryTR" xml:space="preserve">
+    <value>Şubat</value>
+  </data>
+  <data name="FoodEN" xml:space="preserve">
+    <value>Food</value>
+  </data>
+  <data name="FoodTR" xml:space="preserve">
+    <value>Yemek</value>
+  </data>
+  <data name="HealthEN" xml:space="preserve">
+    <value>Health</value>
+  </data>
+  <data name="HealthTR" xml:space="preserve">
+    <value>Sağlık</value>
+  </data>
+  <data name="HeatingBillEN" xml:space="preserve">
+    <value>Heating Bill</value>
+  </data>
+  <data name="HeatingBillTR" xml:space="preserve">
+    <value>Isınma Faturası</value>
+  </data>
+  <data name="HobbyEN" xml:space="preserve">
+    <value>Hobby</value>
+  </data>
+  <data name="HobbyTR" xml:space="preserve">
+    <value>Hobi</value>
+  </data>
+  <data name="HomeEN" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HomeTR" xml:space="preserve">
+    <value>Ev</value>
+  </data>
+  <data name="IncomeEN" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="IncomeTR" xml:space="preserve">
+    <value>Gelir</value>
+  </data>
+  <data name="InformationEN" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="InformationTR" xml:space="preserve">
+    <value>Bilgi</value>
+  </data>
+  <data name="InternetBillEN" xml:space="preserve">
+    <value>Internet Bill</value>
+  </data>
+  <data name="InternetBillTR" xml:space="preserve">
+    <value>İnternet Faturası</value>
+  </data>
+  <data name="InvestmentEN" xml:space="preserve">
+    <value>Investment</value>
+  </data>
+  <data name="InvestmentTR" xml:space="preserve">
+    <value>Yatırım</value>
+  </data>
+  <data name="JanuaryEN" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="JanuaryTR" xml:space="preserve">
+    <value>Ocak</value>
+  </data>
+  <data name="JulyEN" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="JulyTR" xml:space="preserve">
+    <value>Temmuz</value>
+  </data>
+  <data name="JuneEN" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="JuneTR" xml:space="preserve">
+    <value>Haziran</value>
+  </data>
+  <data name="KidEN" xml:space="preserve">
+    <value>Kid</value>
+  </data>
+  <data name="KidTR" xml:space="preserve">
+    <value>Çocuk</value>
+  </data>
+  <data name="LoginEN" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginFormEN" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginFormTR" xml:space="preserve">
+    <value>Giriş Yap</value>
+  </data>
+  <data name="LoginTR" xml:space="preserve">
+    <value>Giriş Yap</value>
+  </data>
+  <data name="MainFormEN" xml:space="preserve">
+    <value>Personal Money Management and Planning</value>
+  </data>
+  <data name="MainFormTR" xml:space="preserve">
+    <value>Kişisel Para Yönetimi ve Planlama</value>
+  </data>
+  <data name="MarchEN" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="MarchTR" xml:space="preserve">
+    <value>Mart</value>
+  </data>
+  <data name="MayEN" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="MayTR" xml:space="preserve">
+    <value>Mayıs</value>
+  </data>
+  <data name="MonthEN" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="MonthTR" xml:space="preserve">
+    <value>Ay</value>
+  </data>
+  <data name="NameEN" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameTR" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="NewScenarioEN" xml:space="preserve">
+    <value>Create Scenario</value>
+  </data>
+  <data name="NewScenarioTR" xml:space="preserve">
+    <value>Senaryo Oluştur</value>
+  </data>
+  <data name="NoAccountEN" xml:space="preserve">
+    <value>No Account</value>
+  </data>
+  <data name="NoAccountTR" xml:space="preserve">
+    <value>Hesap Yok</value>
+  </data>
+  <data name="NoEN" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoIncomeOrExpenseEN" xml:space="preserve">
+    <value>There Is No Income Or Expense</value>
+  </data>
+  <data name="NoIncomeOrExpenseTR" xml:space="preserve">
+    <value>Herhangi Bir Gelir Gider Yok</value>
+  </data>
+  <data name="NoScenariosEN" xml:space="preserve">
+    <value>No Scenarios</value>
+  </data>
+  <data name="NoScenariosTR" xml:space="preserve">
+    <value>Senaryo Yok</value>
+  </data>
+  <data name="NoTR" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NovemberEN" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="NovemberTR" xml:space="preserve">
+    <value>Kasım</value>
+  </data>
+  <data name="OctoberEN" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="OctoberTR" xml:space="preserve">
+    <value>Ekim</value>
+  </data>
+  <data name="OtherEN" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="OtherTR" xml:space="preserve">
+    <value>Diğer</value>
+  </data>
+  <data name="PasswordAgainEN" xml:space="preserve">
+    <value>Password Again</value>
+  </data>
+  <data name="PasswordAgainTR" xml:space="preserve">
+    <value>Şifre Tekrar</value>
+  </data>
+  <data name="PasswordEN" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordTR" xml:space="preserve">
+    <value>Şifre</value>
+  </data>
+  <data name="PersonalCareEN" xml:space="preserve">
+    <value>Personel Care</value>
+  </data>
+  <data name="PersonalCareTR" xml:space="preserve">
+    <value>Kişisel Bakım</value>
+  </data>
+  <data name="PetEN" xml:space="preserve">
+    <value>Pet</value>
+  </data>
+  <data name="PetTR" xml:space="preserve">
+    <value>Evcil Hayvan</value>
+  </data>
+  <data name="PhoneBillEN" xml:space="preserve">
+    <value>Phone Bill</value>
+  </data>
+  <data name="PhoneBillTR" xml:space="preserve">
+    <value>Telefon Faturası</value>
+  </data>
+  <data name="PhoneNumberEN" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="PhoneNumberTR" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="PlanningEN" xml:space="preserve">
+    <value>Planning</value>
+  </data>
+  <data name="PlanningTR" xml:space="preserve">
+    <value>Planlama</value>
+  </data>
+  <data name="RegisterEN" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisterFormEN" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisterFormTR" xml:space="preserve">
+    <value>Kayıt Ol</value>
+  </data>
+  <data name="RegisterTR" xml:space="preserve">
+    <value>Kayıt Ol</value>
+  </data>
+  <data name="RegistrationSuccessEN" xml:space="preserve">
+    <value>Registration Success</value>
+  </data>
+  <data name="RegistrationSuccessTR" xml:space="preserve">
+    <value>Kayıt Başarılı</value>
+  </data>
+  <data name="RentEN" xml:space="preserve">
+    <value>Rent</value>
+  </data>
+  <data name="RentTR" xml:space="preserve">
+    <value>Kira</value>
+  </data>
+  <data name="SalaryEN" xml:space="preserve">
+    <value>Salary</value>
+  </data>
+  <data name="SalaryTR" xml:space="preserve">
+    <value>Maaş</value>
+  </data>
+  <data name="SaleEN" xml:space="preserve">
+    <value>Sale</value>
+  </data>
+  <data name="SaleTR" xml:space="preserve">
+    <value>Satış</value>
+  </data>
+  <data name="SavingEN" xml:space="preserve">
+    <value>Saving</value>
+  </data>
+  <data name="SavingTR" xml:space="preserve">
+    <value>Tasarruf</value>
+  </data>
+  <data name="ScenariosEN" xml:space="preserve">
+    <value>Scenarios</value>
+  </data>
+  <data name="ScenariosTR" xml:space="preserve">
+    <value>Senaryolar</value>
+  </data>
+  <data name="SeptemberEN" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="SeptemberTR" xml:space="preserve">
+    <value>Eylül</value>
+  </data>
+  <data name="SettingsEN" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsTR" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="SubscriptionEN" xml:space="preserve">
+    <value>Subscription</value>
+  </data>
+  <data name="SubscriptionTR" xml:space="preserve">
+    <value>Abonelik</value>
+  </data>
+  <data name="SurnameEN" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="SurnameTR" xml:space="preserve">
+    <value>Soyad</value>
+  </data>
+  <data name="TargetEN" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="TargetTR" xml:space="preserve">
+    <value>Hedef</value>
+  </data>
+  <data name="TargetValueEN" xml:space="preserve">
+    <value>Target Value</value>
+  </data>
+  <data name="TargetValueTR" xml:space="preserve">
+    <value>Hedef Değeri</value>
+  </data>
+  <data name="TelevisionBillEN" xml:space="preserve">
+    <value>Television Bill</value>
+  </data>
+  <data name="TelevisionBillTR" xml:space="preserve">
+    <value>Televizyon Faturası</value>
+  </data>
+  <data name="TotalEN" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TotalExpenseEN" xml:space="preserve">
+    <value>Total Expense</value>
+  </data>
+  <data name="TotalExpenseTR" xml:space="preserve">
+    <value>Toplam Gider</value>
+  </data>
+  <data name="TotalIncomeEN" xml:space="preserve">
+    <value>Total Income</value>
+  </data>
+  <data name="TotalIncomeTR" xml:space="preserve">
+    <value>Toplam Gelir</value>
+  </data>
+  <data name="TotalTR" xml:space="preserve">
+    <value>Toplam</value>
+  </data>
+  <data name="TransportEN" xml:space="preserve">
+    <value>Transport</value>
+  </data>
+  <data name="TransportTR" xml:space="preserve">
+    <value>Ulaşım</value>
+  </data>
+  <data name="TravelEN" xml:space="preserve">
+    <value>Travel</value>
+  </data>
+  <data name="TravelTR" xml:space="preserve">
+    <value>Seyahat</value>
+  </data>
+  <data name="TypeEN" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="TypeTR" xml:space="preserve">
+    <value>Tür</value>
+  </data>
+  <data name="WaterBillEN" xml:space="preserve">
+    <value>Water Bill</value>
+  </data>
+  <data name="WaterBillTR" xml:space="preserve">
+    <value>Su Faturası</value>
+  </data>
+  <data name="WeekEN" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="WeekTR" xml:space="preserve">
+    <value>Hafta</value>
+  </data>
+  <data name="YearEN" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="YearTR" xml:space="preserve">
+    <value>Yıl</value>
+  </data>
+</root>

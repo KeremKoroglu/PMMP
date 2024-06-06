@@ -34,14 +34,11 @@
             this.TsmAddIncomeExpense = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmScenarios = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsmCalendar = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsmIncomes = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsmExpenses = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsmTotal = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsmReport = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmLang = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmAccounts = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmIncomeAndExpenseList = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmScenarioList = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmAccountList = new System.Windows.Forms.ToolStripMenuItem();
             this.PnlBottomMenu = new System.Windows.Forms.Panel();
             this.PnlRightMenu = new System.Windows.Forms.Panel();
             this.PnlLeftMenu = new System.Windows.Forms.Panel();
@@ -59,14 +56,11 @@
             this.TsmAddIncomeExpense,
             this.TsmScenarios,
             this.TsmSettings,
-            this.TsmCalendar,
-            this.TsmIncomes,
-            this.TsmExpenses,
-            this.TsmTotal,
-            this.TsmReport,
-            this.TsmLang,
             this.TsmAccounts,
-            this.TsmIncomeAndExpenseList});
+            this.TsmIncomeAndExpenseList,
+            this.TsmScenarioList,
+            this.TsmAccountList,
+            this.TsmLang});
             this.MnsTopMenu.Location = new System.Drawing.Point(0, 0);
             this.MnsTopMenu.Name = "MnsTopMenu";
             this.MnsTopMenu.ShowItemToolTips = true;
@@ -104,36 +98,6 @@
             this.TsmSettings.Text = "Ayarlar";
             this.TsmSettings.Click += new System.EventHandler(this.TsmSettings_Click);
             // 
-            // TsmCalendar
-            // 
-            this.TsmCalendar.Name = "TsmCalendar";
-            this.TsmCalendar.Size = new System.Drawing.Size(56, 96);
-            this.TsmCalendar.Text = "Takvim";
-            // 
-            // TsmIncomes
-            // 
-            this.TsmIncomes.Name = "TsmIncomes";
-            this.TsmIncomes.Size = new System.Drawing.Size(56, 96);
-            this.TsmIncomes.Text = "Gelirler";
-            // 
-            // TsmExpenses
-            // 
-            this.TsmExpenses.Name = "TsmExpenses";
-            this.TsmExpenses.Size = new System.Drawing.Size(60, 96);
-            this.TsmExpenses.Text = "Giderler";
-            // 
-            // TsmTotal
-            // 
-            this.TsmTotal.Name = "TsmTotal";
-            this.TsmTotal.Size = new System.Drawing.Size(58, 96);
-            this.TsmTotal.Text = "Toplam";
-            // 
-            // TsmReport
-            // 
-            this.TsmReport.Name = "TsmReport";
-            this.TsmReport.Size = new System.Drawing.Size(50, 96);
-            this.TsmReport.Text = "Rapor";
-            // 
             // TsmLang
             // 
             this.TsmLang.Name = "TsmLang";
@@ -154,6 +118,20 @@
             this.TsmIncomeAndExpenseList.Size = new System.Drawing.Size(110, 96);
             this.TsmIncomeAndExpenseList.Text = "Gelir Gider Listele";
             this.TsmIncomeAndExpenseList.Click += new System.EventHandler(this.TsmIncomeAndExpenseList_Click);
+            // 
+            // TsmScenarioList
+            // 
+            this.TsmScenarioList.Name = "TsmScenarioList";
+            this.TsmScenarioList.Size = new System.Drawing.Size(97, 96);
+            this.TsmScenarioList.Text = "Senaryo Listele";
+            this.TsmScenarioList.Click += new System.EventHandler(this.TsmScenarioList_Click);
+            // 
+            // TsmAccountList
+            // 
+            this.TsmAccountList.Name = "TsmAccountList";
+            this.TsmAccountList.Size = new System.Drawing.Size(88, 96);
+            this.TsmAccountList.Text = "Hesap Listele";
+            this.TsmAccountList.Click += new System.EventHandler(this.TsmAccountList_Click);
             // 
             // PnlBottomMenu
             // 
@@ -222,15 +200,12 @@
         private System.Windows.Forms.ToolTip Tlt;
         private System.Windows.Forms.ToolStripMenuItem TsmScenarios;
         private System.Windows.Forms.ToolStripMenuItem TsmAddIncomeExpense;
-        private System.Windows.Forms.ToolStripMenuItem TsmCalendar;
-        private System.Windows.Forms.ToolStripMenuItem TsmIncomes;
-        private System.Windows.Forms.ToolStripMenuItem TsmExpenses;
-        private System.Windows.Forms.ToolStripMenuItem TsmTotal;
-        private System.Windows.Forms.ToolStripMenuItem TsmReport;
         private System.Windows.Forms.ToolStripMenuItem TsmLang;
         private System.Windows.Forms.Panel PnlFill;
         private System.Windows.Forms.ToolStripMenuItem TsmAccounts;
         private System.Windows.Forms.ToolStripMenuItem TsmMainMenu;
         private System.Windows.Forms.ToolStripMenuItem TsmIncomeAndExpenseList;
+        private System.Windows.Forms.ToolStripMenuItem TsmScenarioList;
+        private System.Windows.Forms.ToolStripMenuItem TsmAccountList;
     }
 }

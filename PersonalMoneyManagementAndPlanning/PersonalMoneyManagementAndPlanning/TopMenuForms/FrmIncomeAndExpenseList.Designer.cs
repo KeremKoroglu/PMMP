@@ -42,9 +42,9 @@
             this.PnlBottomLeft = new System.Windows.Forms.Panel();
             this.LblCategory = new System.Windows.Forms.Label();
             this.PnlTopA = new System.Windows.Forms.Panel();
+            this.CmbAccount = new System.Windows.Forms.ComboBox();
             this.CmbSort = new System.Windows.Forms.ComboBox();
             this.LblIncomeAndExpenseList = new System.Windows.Forms.Label();
-            this.CmbAccount = new System.Windows.Forms.ComboBox();
             this.FlpIncomeAndExpenseList.SuspendLayout();
             this.Grp.SuspendLayout();
             this.PnlTop.SuspendLayout();
@@ -211,12 +211,26 @@
             this.PnlTopA.Size = new System.Drawing.Size(1488, 50);
             this.PnlTopA.TabIndex = 4;
             // 
+            // CmbAccount
+            // 
+            this.CmbAccount.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CmbAccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbAccount.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CmbAccount.FormattingEnabled = true;
+            this.CmbAccount.Location = new System.Drawing.Point(1048, 0);
+            this.CmbAccount.Name = "CmbAccount";
+            this.CmbAccount.Size = new System.Drawing.Size(220, 40);
+            this.CmbAccount.TabIndex = 3;
+            this.CmbAccount.SelectedIndexChanged += new System.EventHandler(this.CmbAccount_SelectedIndexChanged);
+            // 
             // CmbSort
             // 
             this.CmbSort.Dock = System.Windows.Forms.DockStyle.Right;
             this.CmbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbSort.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbSort.FormattingEnabled = true;
+            this.CmbSort.Items.AddRange(new object[] {
+            "Tarih"});
             this.CmbSort.Location = new System.Drawing.Point(1268, 0);
             this.CmbSort.Name = "CmbSort";
             this.CmbSort.Size = new System.Drawing.Size(220, 40);
@@ -234,17 +248,6 @@
             this.LblIncomeAndExpenseList.TabIndex = 1;
             this.LblIncomeAndExpenseList.Text = "Gelir Gider Listesi";
             this.LblIncomeAndExpenseList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // CmbAccount
-            // 
-            this.CmbAccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbAccount.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CmbAccount.FormattingEnabled = true;
-            this.CmbAccount.Location = new System.Drawing.Point(1042, 0);
-            this.CmbAccount.Name = "CmbAccount";
-            this.CmbAccount.Size = new System.Drawing.Size(220, 40);
-            this.CmbAccount.TabIndex = 3;
-            this.CmbAccount.SelectedIndexChanged += new System.EventHandler(this.CmbAccount_SelectedIndexChanged);
             // 
             // FrmIncomeAndExpenseList
             // 

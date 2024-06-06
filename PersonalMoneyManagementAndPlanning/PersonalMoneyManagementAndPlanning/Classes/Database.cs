@@ -12,6 +12,8 @@ using System.Data.SqlClient;
 using Dapper.Contrib.Extensions;
 using Dapper;
 using static PersonalMoneyManagementAndPlanning.Classes.Database;
+using System.Net.Http;
+using System.Net;
 
 namespace PersonalMoneyManagementAndPlanning.Classes
 {
@@ -22,8 +24,8 @@ namespace PersonalMoneyManagementAndPlanning.Classes
         private static readonly Authentication Auth = new(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         public static string Id;
         private static readonly string tbUsers = "Users", tbIncomes = "Incomes", tbExpenses = "Expenses",
-            tbAccounts = "Accounts", tbIEC = "IncomeAndExpenseCategories", tbAC = "AccountCategories",
-            tbCC = "CurrencyCategories";
+            tbAccounts = "Accounts", tbScenarios = "Scenarios", tbIEC = "IncomeAndExpenseCategories", tbAC = "AccountCategories",
+            tbCC = "CurrencyCategories", tbSC = "ScenarioCategories";
         private static readonly int Year = DateTime.Now.Year, Month = DateTime.Now.Month, Day = DateTime.Now.Day;
 
         // PRIVATE
@@ -40,6 +42,18 @@ namespace PersonalMoneyManagementAndPlanning.Classes
                 "Tasarruf" => "Saving",
                 "Yatırım" => "Investmen",
                 "Kredi" => "Credit",
+                "Diğer" => "Other",
+                _ => text,
+            };
+        }
+
+        private static string TranslateScenarioText(string text)
+        {
+            return text switch
+            {
+                "Planlama" => "Planning",
+                "Borç Ödemesi" => "DebtPayment",
+                "Satın Alma Planı" => "BuyPlan",
                 "Diğer" => "Other",
                 _ => text,
             };
@@ -83,7 +97,6 @@ namespace PersonalMoneyManagementAndPlanning.Classes
 
         // PUBLIC
         #region
-
         public static void SetId(string email)
         {
             Id = Manager.GetColumn(tbUsers, "Id", ("Email", "=", email, null))[0];
@@ -118,12 +131,12 @@ namespace PersonalMoneyManagementAndPlanning.Classes
                 var expenses = Con.Query<IncomeAndExpense>($"SELECT Id, UserId, Description, Amount, Category, Account, Scenario, Date, 'Expense' AS TableName FROM {tbExpenses} WHERE UserId = {Id} AND Account = '{account}'").ToList();
                 iae = incomes.Concat(expenses).ToList();
             }
-            else if (Manager.IsThere(tbExpenses, "Account", ("Account", "=", account, null)) && !Manager.IsThere(tbExpenses, "Account", ("Account", "=", account, null)))
+            else if (Manager.IsThere(tbIncomes, "Account", ("Account", "=", account, null)) && !Manager.IsThere(tbExpenses, "Account", ("Account", "=", account, null)))
             {
                 var incomes = Con.Query<IncomeAndExpense>($"SELECT Id, UserId, Description, Amount, Category, Account, Scenario, Date, 'Income' AS TableName FROM {tbIncomes} WHERE UserId = {Id} AND Account = '{account}'").ToList();
                 iae = incomes.ToList();
             }
-            else if (!Manager.IsThere(tbExpenses, "Account", ("Account", "=", account, null)) && Manager.IsThere(tbExpenses, "Account", ("Account", "=", account, null)))
+            else if (Manager.IsThere(tbExpenses, "Account", ("Account", "=", account, null)) && !Manager.IsThere(tbIncomes, "Account", ("Account", "=", account, null)))
             {
                 var expenses = Con.Query<IncomeAndExpense>($"SELECT Id, UserId, Description, Amount, Category, Account, Scenario, Date, 'Expense' AS TableName FROM {tbExpenses} WHERE UserId = {Id} AND Account = '{account}'").ToList();
                 iae = expenses.ToList();
@@ -138,9 +151,18 @@ namespace PersonalMoneyManagementAndPlanning.Classes
                 "Tarih" or "Date" => iae.OrderBy(t => t.Date).ToList(),
                 "Tutar" or "Amount" => iae.OrderBy(t => t.Amount).ToList(),
                 "Kategori" or "Category" => iae.OrderBy(t => t.Category).ToList(),
-                "Hesap" or "Account" => iae.OrderBy(t => t.Account).ToList(),
                 _ => iae.ToList(),
             };
+        }
+
+        public static List<Scenarios> ScenarioList()
+        {
+            return Con.Query<Scenarios>($"SELECT * FROM {tbScenarios} WHERE UserId = {Id}").ToList();
+        }
+
+        public static List<Accounts> AccountList()
+        {
+            return Con.Query<Accounts>($"SELECT * FROM {tbAccounts} WHERE UserId = {Id}").ToList();
         }
 
         public static string CurrencySymbol(string account) // Tümü Seçildiğinde Ana Birim Cinsinden Hesapla
@@ -166,10 +188,16 @@ namespace PersonalMoneyManagementAndPlanning.Classes
             Manager.Insert(tbExpenses, ("UserId", Id), ("Description", description), ("Amount", amount), ("Category", category), ("Account", account), ("Date", date));
         }
         
-        public static void AddAccount(string no, string name, string description, string category, string currency, string createdDate)
+        public static void AddAccount(string no, string name, string description, string category, string currency)
         {
             category = TranslateAccountText(category);
-            Manager.Insert(tbAccounts, ("UserId", Id), ("No", no), ("Name", name), ("Description", description), ("Category", category), ("Currency", currency), ("CreatedDate", createdDate));
+            Manager.Insert(tbAccounts, ("UserId", Id), ("No", no), ("Name", name), ("Description", description), ("Category", category), ("Currency", currency), ("CreatedDate", DateTime.Now.ToString("s")));
+        }
+
+        public static void AddScenario(string name, string description, string category, string target, string targetValue)
+        {
+            category = TranslateScenarioText(category);
+            Manager.Insert(tbScenarios, ("UserId", Id), ("Name", name), ("Description", description), ("Category", category), ("Target", target), ("TargetValue", targetValue), ("CreatedDate", DateTime.Now.ToString("s")));
         }
         #endregion
 
@@ -185,14 +213,14 @@ namespace PersonalMoneyManagementAndPlanning.Classes
             return Manager.GetColumn(tbAC, "Name", null);
         }
 
+        public static string[] ScenarioCategories()
+        {
+            return Manager.GetColumn(tbSC, "Name", null);
+        }
+
         public static string[] CurrencyCategories()
         {
             return Manager.GetColumn(tbCC, "Name", null);
-        }
-
-        public static string[] Accounts()
-        {
-            return Manager.GetColumn(tbAccounts, "Name", ("UserId", "=", Id, null));
         }
         #endregion
 
@@ -525,6 +553,50 @@ namespace PersonalMoneyManagementAndPlanning.Classes
 
             return total;
         }
+
+        public static decimal TotalByScenario(string scenario)
+        {
+            decimal incomes = 0, expenses = 0;
+
+            if (Manager.GetColumn(tbIncomes, "Amount", ("Scenario", "=", scenario, null)) != null)
+            {
+                foreach (var item in Manager.GetColumn(tbIncomes, "Amount", ("Scenario", "=", scenario, null)))
+                {
+                    incomes += Convert.ToDecimal(item);
+                }
+            }
+            if(Manager.GetColumn(tbExpenses, "Amount", ("Scenario", "=", scenario, null)) != null)
+            {
+                foreach (var item in Manager.GetColumn(tbExpenses, "Amount", ("Scenario", "=", scenario, null)))
+                {
+                    expenses += Convert.ToDecimal(item);
+                }
+            }
+            
+            return incomes - expenses;
+        }
+
+        public static decimal TotalByAccount(string account)
+        {
+            decimal incomes = 0, expenses = 0;
+
+            if (Manager.GetColumn(tbIncomes, "Amount", ("Account", "=", account, null)) != null)
+            {
+                foreach (var item in Manager.GetColumn(tbIncomes, "Amount", ("Account", "=", account, null)))
+                {
+                    incomes += Convert.ToDecimal(item);
+                }
+            }
+            if (Manager.GetColumn(tbExpenses, "Amount", ("Account", "=", account, null)) != null)
+            {
+                foreach (var item in Manager.GetColumn(tbExpenses, "Amount", ("Account", "=", account, null)))
+                {
+                    expenses += Convert.ToDecimal(item);
+                }
+            }
+
+            return incomes - expenses;
+        }
         #endregion
 
         #endregion
@@ -569,6 +641,32 @@ namespace PersonalMoneyManagementAndPlanning.Classes
             public string Scenario { get; set; }
             public DateTime Date { get; set; }
             public string TableName { get; set; }
+        }
+
+        public class Scenarios
+        {
+            [Key]
+            public int Id { get; set; }
+            public int UserId { get; set; }
+            public string Name { get; set; }
+            public string Description { get; set; }
+            public string Category { get; set; }
+            public string Target { get; set; }
+            public decimal TargetValue { get; set; }
+            public DateTime CreatedDate { get; set; }
+        }
+
+        public class Accounts
+        {
+            [Key]
+            public int Id { get; set; }
+            public int UserId { get; set; }
+            public string No { get; set; }
+            public string Name { get; set; }
+            public string Description { get; set; }
+            public string Category { get; set; }
+            public string Currency { get; set; }
+            public DateTime CreatedDate { get; set; }
         }
         #endregion
     }
